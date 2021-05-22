@@ -1,0 +1,988 @@
+#swing-20 {
+	background-color: #009900;
+}
+
+#safe-d {
+    /*background-color: #646EFF;*/
+    background-color: #1A35CE;
+    width: 500px;
+}
+#likely-d {
+    /*background-color: #8C9BF7;*/
+    background-color: #4F5ED6; 
+    width: 00px;
+}
+#lean-d {
+    /*background-color: #B4C8F0;*/
+    background-color: #8487DE;
+    width: 0px;
+}
+#barely-d {
+	/*background-color: #C8C8DC;*/
+	background-color: #B9B0E6;
+    width: 0px;
+}
+
+#tossup {
+	background-color: #B59CCC;
+	width: 0px;
+}
+
+#barely-r {
+    /*background-color: #DCC8C8;*/
+    background-color: #EAC4D4;
+    width: 0px;
+}
+#lean-r {
+    /*background-color: #F0C8B4;*/
+    background-color: #E6B0B9;
+    width: 0px;
+}
+#likely-r {
+    /*background-color: #F79B8C;*/
+    background-color: #DA736A;
+    width: 00px;
+}
+#safe-r {
+    /*background-color: #FF6E64;*/
+    background-color: #CE351A;
+    width: 500px;
+}
+
+/* List of the senate seats up for grabs in 2020 
+	Mostly Class 2 seats with the exceptions of
+	Arizona (Class 3) and Georgia (Class 3) 
+	Safe D: #1A35CE
+	Likely D: #4F5ED6
+	Lean D: #8487DE
+	Tossup: #B59CCC
+	Lean R: #E6B0B9
+	Likely R: #DA736A
+	Safe R: #CE351A
+	Independent: #008800
+*/
+
+/* Class 3 Special Seats */
+.pixel.state.az.c3 {
+	background-color: #8487DE;
+}
+
+.pixel.state.ga.c3 {
+	background-color: #8487DE;
+}
+
+/* Class 2 */
+.pixel.state.al.c2 {
+	background-color: #E6B0B9;
+}
+
+.pixel.state.ak.c2 {
+	background-color: #CE351A;
+}
+
+.pixel.state.ar.c2 {
+	background-color: #CE351A;
+}
+
+.pixel.state.co.c2 {
+	background-color: #8487DE;
+}
+
+.pixel.state.de.c2 {
+	background-color: #1A35CE;
+}
+
+.pixel.state.ga.c2 {
+	background-color: #8487DE;
+}
+
+.pixel.state.id.c2 {
+	background-color: #CE351A;
+}
+
+.pixel.state.il.c2 {
+	background-color: #1A35CE;
+}
+
+.pixel.state.ia.c2 {
+	background-color: #CE351A;
+}
+
+.pixel.state.ks.c2 {
+	background-color: #CE351A;
+}
+
+.pixel.state.ky.c2 {
+	background-color: #CE351A;
+}
+
+.pixel.state.la.c2 {
+	background-color: #CE351A;
+}
+
+.pixel.state.me.c2 {
+	background-color: #CE351A;
+}
+
+.pixel.state.ma.c2 {
+	background-color: #1A35CE;
+}
+
+.pixel.state.mi.c2 {
+	background-color: #1A35CE;
+}
+
+.pixel.state.mn.c2 {
+	background-color: #1A35CE;
+}
+
+.pixel.state.ms.c2 {
+	background-color: #CE351A;
+}
+
+.pixel.state.mt.c2 {
+	background-color: #CE351A;
+}
+
+.pixel.state.ne.c2 {
+	background-color: #CE351A;
+}
+
+.pixel.state.nh.c2 {
+	background-color: #1A35CE;
+}
+
+.pixel.state.nj.c2 {
+	background-color: #1A35CE;
+}
+
+.pixel.state.nm.c2 {
+	background-color: #1A35CE;
+}
+
+.pixel.state.nc.c2 {
+	background-color: #CE351A;
+}
+
+.pixel.state.ok.c2 {
+	background-color: #CE351A;
+}
+
+.pixel.state.or.c2 {
+	background-color: #1A35CE;
+}
+
+.pixel.state.ri.c2 {
+	background-color: #1A35CE;
+}
+
+.pixel.state.sc.c2 {
+	background-color: #CE351A;
+}
+
+.pixel.state.sd.c2 {
+	background-color: #CE351A;
+}
+
+.pixel.state.tn.c2 {
+	background-color: #CE351A;
+}
+
+.pixel.state.tx.c2 {
+	background-color: #CE351A;
+}
+
+.pixel.state.va.c2 {
+	background-color: #1A35CE;
+}
+
+.pixel.state.wv.c2 {
+	background-color: #CE351A;
+}
+
+.pixel.state.wy.c2 {
+	background-color: #CE351A;
+}
+
+
+/* Seats Not Up for Reelection */
+/* CLASS 1 */
+
+#az-1 {
+    color: #1A35CE;
+}
+
+#ca-1 {
+    color: #1A35CE;
+}
+
+#ct-1 {
+    color: #1A35CE;
+}
+
+#de-1 {
+    color: #1A35CE;
+}
+
+#fl-1 {
+    color: #CE351A;
+}
+
+#hi-1 {
+    color: #1A35CE;
+}
+
+#in-1 {
+    color: #CE351A;
+}
+
+#me-1 {
+    color: #008800;
+}
+
+#md-1 {
+    color: #1A35CE;
+}
+
+#ma-1 {
+    color: #1A35CE;
+}
+
+#mi-1 {
+    color: #1A35CE;
+}
+
+#mn-1 {
+    color: #1A35CE;
+}
+
+#ms-1 {
+    color: #CE351A;
+}
+
+#mo-1 {
+    color: #CE351A;
+}
+
+#mt-1 {
+    color: #1A35CE;
+}
+
+#ne-1 {
+    color: #CE351A;
+}
+
+#nv-1 {
+    color: #1A35CE;
+}
+
+#nj-1 {
+    color: #1A35CE;
+}
+
+#nm-1 {
+    color: #1A35CE;
+}
+
+#ny-1 {
+    color: #1A35CE;
+}
+
+#nd-1 {
+    color: #CE351A;
+}
+
+#oh-1 {
+    color: #1A35CE;
+}
+
+#pa-1 {
+    color: #1A35CE;
+}
+
+#ri-1 {
+    color: #1A35CE;
+}
+
+#tn-1 {
+    color: #CE351A;
+}
+
+#tx-1 {
+    color: #CE351A;
+}
+
+#ut-1 {
+    color: #CE351A;
+}
+
+#vt-1 {
+    color: #008800;
+}
+
+#va-1 {
+    color: #1A35CE;
+}
+
+#wa-1 {
+    color: #1A35CE;
+}
+
+#wv-1 {
+    color: #1A35CE;
+}
+
+#wi-1 {
+    color: #1A35CE;
+}
+
+#wy-1 {
+    color: #CE351A;
+}
+
+/* CLASS 3 */
+
+#al-3 {
+    color: #CE351A;
+}
+
+#ak-3 {
+    color: #CE351A;
+}
+
+/*#az-3 {
+    color: #CE351A;
+}*/
+
+#ar-3 {
+    color: #CE351A;
+}
+
+#ca-3 {
+    color: #1A35CE;
+}
+
+#co-3 {
+    color: #1A35CE;
+}
+
+#ct-3 {
+    color: #1A35CE;
+}
+
+#fl-3 {
+    color: #CE351A;
+}
+
+/*#ga-3 {
+    color: #CE351A;
+}*/
+
+#hi-3 {
+    color: #1A35CE;
+}
+
+#id-3 {
+    color: #CE351A;
+}
+
+#il-3 {
+    color: #1A35CE;
+}
+
+#in-3 {
+    color: #CE351A;
+}
+
+#ia-3 {
+    color: #CE351A;
+}
+
+#ks-3 {
+    color: #CE351A;
+}
+
+#ky-3 {
+    color: #CE351A;
+}
+
+#la-3 {
+    color: #CE351A;
+}
+
+#md-3 {
+    color: #1A35CE;
+}
+
+#mo-3 {
+    color: #CE351A;
+}
+
+#nv-3 {
+    color: #1A35CE;
+}
+
+#nh-3 {
+    color: #1A35CE;
+}
+
+#ny-3 {
+    color: #1A35CE;
+}
+
+#nc-3 {
+    color: #CE351A;
+}
+
+#nd-3 {
+    color: #CE351A;
+}
+
+#oh-3 {
+    color: #CE351A;
+}
+
+#ok-3 {
+    color: #CE351A;
+}
+
+#or-3 {
+    color: #1A35CE;
+}
+
+#pa-3 {
+    color: #CE351A;
+}
+
+#sc-3 {
+    color: #CE351A;
+}
+
+#sd-3 {
+    color: #CE351A;
+}
+
+#ut-3 {
+    color: #CE351A;
+}
+
+#vt-3 {
+    color: #1A35CE;
+}
+
+#wa-3 {
+    color: #1A35CE;
+}
+
+#wi-3 {
+    color: #CE351A;
+}
+
+/* INFOBOXES */
+
+#ak-2-info {
+	bottom: 650px;
+	left: 115px;
+}
+
+#ak-3-info {
+	bottom: 610px;
+	left: 155px;
+}
+
+#hi-1-info {
+	bottom: 170px;
+	left: 115px;
+}
+
+#hi-3-info {
+	bottom: 130px;
+	left: 155px;
+}
+
+#me-1-info {
+	bottom: 650px;
+	left: 1070px;
+}
+
+#me-2-info {
+	bottom: 610px;
+	left: 1110px;
+}
+
+/* NORMAL INFOBOXES */
+
+#al-2-info {
+    top: 310px;
+    left: 535px;
+}
+
+#al-3-info {
+	top: 350px;
+	left: 575px;
+}
+
+#az-1-info {
+    top: 230px;
+    left: 135px;
+}
+
+#az-3-info {
+	top: 270px;
+	left: 175px;
+}
+
+#ar-2-info {
+	top: 230px;
+	left: 375px;
+}
+
+#ar-3-info {
+	top: 270px;
+	left: 415px;
+}
+
+#ca-1-info {
+    top: 150px;
+    left: 55px;
+}
+
+#ca-3-info {
+	top: 190px;
+	left: 95px;
+}
+
+#co-2-info {
+	top: 150px;
+	left: 215px;
+}
+
+#co-3-info {
+	top: 190px;
+	left: 255px;
+}
+
+#ct-1-info {
+	top: 150px;
+	left: 775px;
+}
+
+#ct-3-info {
+	top: 190px;
+	left: 815px;
+}
+
+#de-1-info {
+	top: 150px;
+	left: 695px;
+}
+
+#de-2-info {
+	top: 190px;
+	left: 735px;
+}
+
+#fl-1-info {
+    top: 390px;
+    left: 615px;
+}
+
+#fl-3-info {
+	top: 430px;
+	left: 655px;
+}
+
+#ga-2-info {
+    top: 310px;
+    left: 615px;
+}
+
+#ga-3-info {
+	top: 350px;
+	left: 655px;
+}
+
+#id-2-info {
+	top: -10px;
+	left: 135px;
+}
+
+#id-3-info {
+	top: 30px;
+	left: 175px;
+}
+
+#il-2-info {
+	top: 70px;
+	left: 455px;
+}
+
+#il-3-info {
+	top: 110px;
+	left: 495px;
+}
+
+#in-1-info {
+	top: 150px;
+	left: 455px;
+}
+
+#in-3-info {
+	top: 190px;
+	left: 495px;
+}
+
+#ia-2-info {
+	top: 70px;
+	left: 375px;
+}
+
+#ia-3-info {
+	top: 110px;
+	left: 415px;
+}
+
+#ks-2-info {
+	top: 230px;
+	left: 295px;
+}
+
+#ks-3-info {
+	top: 270px;
+	left: 335px;
+}
+
+#ky-2-info {
+	top: 230px;
+	left: 455px;
+}
+
+#ky-3-info {
+	top: 270px;
+	left: 495px;
+}
+
+#la-2-info {
+	top: 310px;
+	left: 375px;
+}
+
+#la-3-info {
+	top: 350px;
+	left: 415px;
+}
+
+#md-1-info {
+	top: 230px;
+	left: 695px;
+}
+
+#md-3-info {
+	top: 270px;
+	left: 735px;
+}
+
+#ma-1-info {
+	top: 70px;
+	left: 775px;
+}
+
+#ma-2-info {
+	top: 110px;
+	left: 815px;
+}
+
+#mi-1-info {
+	top: -10px;
+	left: 535px;
+}
+
+#mi-2-info {
+	top: 30px;
+	left: 575px;
+}
+
+#mn-1-info {
+	top: -10px;
+	left: 375px;
+}
+
+#mn-2-info {
+	top: 30px;
+	left: 415px;
+}
+
+#ms-1-info {
+	top: 310px;
+	left: 455px;
+}
+
+#ms-2-info {
+	top: 350px;
+	left: 495px;
+}
+
+#mo-1-info {
+	top: 150px;
+	left: 375px;
+}
+
+#mo-3-info {
+	top: 190px;
+	left: 415px;
+}
+
+#mt-1-info {
+	top: -10px;
+	left: 215px;
+}
+
+#mt-2-info {
+	top: 30px;
+	left: 255px;
+}
+
+#ne-1-info {
+	top: 150px;
+	left: 295px;
+}
+
+#ne-2-info {
+	top: 190px;
+	left: 335px;
+}
+
+#nv-1-info {
+	top: 70px;
+	left: 135px;
+}
+
+#nv-3-info {
+	top: 110px;
+	left: 175px;
+}
+
+#nh-2-info {
+	top: -10px;
+	left: 855px;
+}
+
+#nh-3-info {
+	top: 30px;
+	left: 895px;
+}
+
+#nj-1-info {
+	top: 70px;
+	left: 695px;
+}
+
+#nj-2-info {
+	top: 110px;
+	left: 735px;
+}
+
+#nm-1-info {
+	top: 230px;
+	left: 215px;
+}
+
+#nm-2-info {
+	top: 270px;
+	left: 255px;
+}
+
+#ny-1-info {
+	top: -10px;
+	left: 695px;
+}
+
+#ny-3-info {
+	top: 30px;
+	left: 735px;
+}
+
+#nc-2-info {
+	top: 150px;
+	left: 615px;
+}
+
+#nc-3-info {
+	top: 190px;
+	left: 655px;
+}
+
+#nd-1-info {
+	top: -10px;
+	left: 295px;
+}
+
+#nd-3-info {
+	top: 30px;
+	left: 335px;
+}
+
+#oh-1-info {
+	top: 70px;
+	left: 535px;
+}
+
+#oh-3-info {
+	top: 110px;
+	left: 575px;
+}
+
+#ok-2-info {
+	top: 310px;
+	left: 295px;
+}
+
+#ok-3-info {
+	top: 350px;
+	left: 335px;
+}
+
+#or-2-info {
+    top: 70px;
+    left: 55px;
+}
+
+#or-3-info {
+	top: 110px;
+	left: 95px;
+}
+
+#pa-1-info {
+	top: -10px;
+	left: 615px;
+}
+
+#pa-3-info {
+	top: 30px;
+	left: 655px;
+}
+
+#ri-1-info {
+	top: 150px;
+	left: 855px;
+}
+
+#ri-2-info {
+	top: 190px;
+	left: 895px;
+}
+
+#sc-2-info {
+	top: 230px;
+	left: 615px;
+}
+
+#sc-3-info {
+	top: 270px;
+	left: 655px;
+}
+
+#sd-2-info {
+	top: 70px;
+	left: 295px;
+}
+
+#sd-3-info {
+	top: 110px;
+	left: 335px;
+}
+
+#tn-1-info {
+	top: 230px;
+	left: 535px;
+}
+
+#tn-2-info {
+	top: 270px;
+	left: 575px;
+}
+#tx-1-info {
+	top: 390px;
+	left: 295px;
+}
+
+#tx-2-info {
+	top: 430px;
+	left: 335px;
+}
+
+#ut-1-info {
+    top: 150px;
+    left: 135px;
+}
+
+#ut-3-info {
+	top: 190px;
+	left: 175px;
+}
+
+#vt-1-info {
+	top: -10px;
+	left: 775px;
+}
+
+#vt-3-info {
+	top: 30px;
+	left: 815px;
+}
+
+#va-1-info {
+	top: 70px;
+	left: 615px;
+}
+
+#va-2-info {
+	top: 110px;
+	left: 655px;
+}
+
+#wa-1-info {
+	top: -10px;
+	left: 55px;
+}
+
+#wa-3-info {
+	top: 30px;
+	left: 95px;
+}
+
+#wv-1-info {
+	top: 150px;
+	left: 535px;
+}
+
+#wv-2-info {
+	top: 190px;
+	left: 575px;
+}
+
+#wi-1-info {
+	top: -10px;
+	left: 455px;
+}
+
+#wi-3-info {
+	top: 30px;
+	left: 495px;
+}
+
+#wy-1-info {
+	top: 70px;
+	left: 215px;
+}
+
+#wy-2-info {
+	top: 110px;
+	left: 255px;
+}
+
+
+
+
+
+

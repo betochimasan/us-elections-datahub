@@ -1,0 +1,216 @@
+#swing-04 {
+    background-color: #009900;
+}
+
+
+/* List of the states with appropriate ratings 
+    Safe D: #1A35CE
+    Likely D: #4F5ED6
+    Lean D: #8487DE
+    Barely D: #B9B0E6
+    Barely R: #EAC4D4
+    Lean R: #E6B0B9
+    Likely R: #DA736A
+    Safe R: #CE351A
+    Independent: #008800
+*/
+
+.pixel.state.al {
+    background-color: #DA736A;
+}
+
+.pixel.state.ak {
+    background-color: #8487DE;
+}
+
+.pixel.state.az {
+    background-color: #EAC4D4;
+}
+
+.pixel.state.ar {
+    background-color: #EAC4D4;
+}
+
+.pixel.state.ca {
+    background-color: #EAC4D4;
+}
+
+.pixel.state.co {
+    background-color: #B9B0E6;
+}
+
+.pixel.state.ct {
+    background-color: #E6B0B9;
+}
+
+.pixel.state.de {
+    background-color: #E6B0B9;
+}
+
+.pixel.state.fl {
+    background-color: #EAC4D4;
+}
+
+.pixel.state.ga {
+    background-color: #EAC4D4;
+}
+
+.pixel.state.hi {
+    background-color: #E6B0B9;
+}
+
+.pixel.state.id {
+    background-color: #B9B0E6;
+}
+
+.pixel.state.il {
+    background-color: #EAC4D4;
+}
+
+.pixel.state.in {
+    background-color: #E6B0B9;
+}
+
+.pixel.state.ia {
+    background-color: #EAC4D4;
+}
+
+.pixel.state.ks {
+    background-color: #EAC4D4;
+}
+
+.pixel.state.ky {
+    background-color: #EAC4D4;
+}
+
+.pixel.state.la {
+    background-color: #E6B0B9;
+}
+
+.pixel.state.me {
+    background-color: #B9B0E6;
+}
+
+.pixel.state.md {
+    background-color: #EAC4D4;
+}
+
+.pixel.state.ma {
+    background-color: #EAC4D4;
+}
+
+.pixel.state.mi {
+    background-color: #EAC4D4;
+}
+
+.pixel.state.mn {
+    background-color: #B9B0E6;
+}
+
+.pixel.state.ms {
+    background-color: #EAC4D4;
+}
+
+.pixel.state.mo {
+    background-color: #EAC4D4;
+}
+
+.pixel.state.mt {
+    background-color: #B9B0E6;
+}
+
+.pixel.state.ne {
+    background-color: #EAC4D4;
+}
+
+.pixel.state.nv {
+    background-color: #B9B0E6;
+}
+
+.pixel.state.nh {
+    background-color: #B9B0E6;
+}
+
+.pixel.state.nj {
+    background-color: #E6B0B9;
+}
+
+.pixel.state.nm {
+    background-color: #EAC4D4;
+}
+
+.pixel.state.ny {
+    background-color: #E6B0B9;
+}
+
+.pixel.state.nc {
+    background-color: #B9B0E6;
+}
+
+.pixel.state.nd {
+    background-color: #B9B0E6;
+}
+
+.pixel.state.oh {
+    background-color: #B9B0E6;
+}
+
+.pixel.state.ok {
+    background-color: #E6B0B9;
+}
+
+.pixel.state.or {
+    background-color: #B9B0E6;
+}
+
+.pixel.state.pa {
+    background-color: #EAC4D4;
+}
+
+.pixel.state.ri {
+    background-color: #E6B0B9;
+}
+
+.pixel.state.sc {
+    background-color: #EAC4D4;
+}
+
+.pixel.state.sd {
+    background-color: #B9B0E6;
+}
+
+.pixel.state.tn {
+    background-color: #DA736A;
+}
+
+.pixel.state.tx {
+    background-color: #EAC4D4;
+}
+
+.pixel.state.ut {
+    background-color: #E6B0B9;
+}
+
+.pixel.state.vt {
+    background-color: #4F5ED6;
+}
+
+.pixel.state.va {
+    background-color: #EAC4D4;
+}
+
+.pixel.state.wa {
+    background-color: #B9B0E6;
+}
+
+.pixel.state.wv {
+    background-color: #E6B0B9;
+}
+
+.pixel.state.wi {
+    background-color: #B9B0E6;
+}
+
+.pixel.state.wy {
+    background-color: #B9B0E6;
+}

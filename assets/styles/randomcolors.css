@@ -1,0 +1,639 @@
+/* Default Setting for States */
+.hex.state .top {
+    border-bottom: 7.5px solid #D2C8D2;
+}
+
+.hex.state .middle {
+    background: #D2C8D2;
+}
+
+.hex.state .bottom {
+    border-top: 7.5px solid #D2C8D2;
+}
+
+/* Individual States */
+
+/* AL */
+.hex.state.al .top {
+	border-bottom: 7.5px solid #FF6E64;
+}
+.hex.state.al .middle {
+	background-color: #FF6E64;
+}
+.hex.state.al .bottom {
+	border-top: 7.5px solid #FF6E64;
+}
+
+/* AK */
+.hex.state.ak .top {
+	border-bottom: 7.5px solid #FF6E64;
+}
+.hex.state.ak .middle {
+	background-color: #FF6E64;
+}
+.hex.state.ak .bottom {
+	border-top: 7.5px solid #FF6E64;
+}
+
+/* AZ */
+.hex.state.az .top {
+	border-bottom: 7.5px solid #672323;
+}
+.hex.state.az .middle {
+	background-color: #672323;
+}
+.hex.state.az .bottom {
+	border-top: 7.5px solid #672323;
+}
+
+/* AR */
+.hex.state.ar .top {
+	border-bottom: 7.5px solid #FF6E64;
+}
+.hex.state.ar .middle {
+	background-color: #FF6E64;
+}
+.hex.state.ar .bottom {
+	border-top: 7.5px solid #FF6E64;
+}
+
+/* CA */
+.hex.state.ca .top {
+	border-bottom: 7.5px solid #0000FF;
+}
+.hex.state.ca .middle {
+	background-color: #0000FF;
+}
+.hex.state.ca .bottom {
+	border-top: 7.5px solid #0000FF;
+}
+
+/* CO */
+.hex.state.co .top {
+	border-bottom: 7.5px solid #6400FF;
+}
+.hex.state.co .middle {
+	background-color: #6400FF;
+}
+.hex.state.co .bottom {
+	border-top: 7.5px solid #6400FF;
+}
+
+/* CT */
+.hex.state.ct .top {
+	border-bottom: 7.5px solid #44FF44;
+}
+.hex.state.ct .middle {
+	background-color: #44FF44;
+}
+.hex.state.ct .bottom {
+	border-top: 7.5px solid #44FF44;
+}
+
+/* DE */
+.hex.state.de .top {
+	border-bottom: 7.5px solid #643333;
+}
+.hex.state.de .middle {
+	background-color: #643333;
+}
+.hex.state.de .bottom {
+	border-top: 7.5px solid #643333;
+}
+
+/* DC */
+.hex.state.dc .top {
+	border-bottom: 7.5px solid #112233;
+}
+.hex.state.dc .middle {
+	background-color: #112233;
+}
+.hex.state.dc .bottom {
+	border-top: 7.5px solid #112233;
+}
+
+/* FL */
+.hex.state.fl .top {
+	border-bottom: 7.5px solid #994499;
+}
+.hex.state.fl .middle {
+	background-color: #994499;
+}
+.hex.state.fl .bottom {
+	border-top: 7.5px solid #994499;
+}
+
+/* GA */
+.hex.state.ga .top {
+	border-bottom: 7.5px solid #5555FF;
+}
+.hex.state.ga .middle {
+	background-color: #5555FF;
+}
+.hex.state.ga .bottom {
+	border-top: 7.5px solid #5555FF;
+}
+
+/* HI */
+.hex.state.hi .top {
+	border-bottom: 7.5px solid #777777;
+}
+.hex.state.hi .middle {
+	background-color: #777777;
+}
+.hex.state.hi .bottom {
+	border-top: 7.5px solid #777777;
+}
+
+/* ID */
+.hex.state.id .top {
+	border-bottom: 7.5px solid #FF00FF;
+}
+.hex.state.id .middle {
+	background-color: #FF00FF;
+}
+.hex.state.id .bottom {
+	border-top: 7.5px solid #FF00FF;
+}
+
+/* IL */
+.hex.state.il .top {
+	border-bottom: 7.5px solid #717711;
+}
+.hex.state.il .middle {
+	background-color: #717711;
+}
+.hex.state.il .bottom {
+	border-top: 7.5px solid #717711;
+}
+
+/* IN */
+.hex.state.in .top {
+	border-bottom: 7.5px solid #996600;
+}
+.hex.state.in .middle {
+	background-color: #996600;
+}
+.hex.state.in .bottom {
+	border-top: 7.5px solid #996600;
+}
+
+/* IA */
+.hex.state.ia .top {
+	border-bottom: 7.5px solid #FF0066;
+}
+.hex.state.ia .middle {
+	background-color: #FF0066;
+}
+.hex.state.ia .bottom {
+	border-top: 7.5px solid #FF0066;
+}
+
+/* KS */
+.hex.state.ks .top {
+	border-bottom: 7.5px solid #777777;
+}
+.hex.state.ks .middle {
+	background-color: #777777;
+}
+.hex.state.ks .bottom {
+	border-top: 7.5px solid #777777;
+}
+
+/* KY */
+.hex.state.ky .top {
+	border-bottom: 7.5px solid #FF6E64;
+}
+.hex.state.ky .middle {
+	background-color: #FF6E64;
+}
+.hex.state.ky .bottom {
+	border-top: 7.5px solid #FF6E64;
+}
+
+/* LA */
+.hex.state.la .top {
+	border-bottom: 7.5px solid #FF6E64;
+}
+.hex.state.la .middle {
+	background-color: #FF6E64;
+}
+.hex.state.la .bottom {
+	border-top: 7.5px solid #FF6E64;
+}
+
+/* ME-AL */
+.hex.state.me .top {
+	border-bottom: 7.5px solid #646EFF;
+}
+.hex.state.me .middle {
+	background-color: #646EFF;
+}
+.hex.state.me .bottom {
+	border-top: 7.5px solid #646EFF;
+}
+
+/* ME-1*/
+.hex.state.me1 .top {
+	border-bottom: 7.5px solid #646EFF;
+}
+.hex.state.me1 .middle {
+	background-color: #646EFF;
+}
+.hex.state.me1 .bottom {
+	border-top: 7.5px solid #646EFF;
+}
+
+/* ME-2 */
+.hex.state.me2 .top {
+	border-bottom: 7.5px solid #FF6E64;
+}
+.hex.state.me2 .middle {
+	background-color: #FF6E64;
+}
+.hex.state.me2 .bottom {
+	border-top: 7.5px solid #FF6E64;
+}
+
+/* MD */
+.hex.state.md .top {
+	border-bottom: 7.5px solid #646EFF;
+}
+.hex.state.md .middle {
+	background-color: #646EFF;
+}
+.hex.state.md .bottom {
+	border-top: 7.5px solid #646EFF;
+}
+
+/* MA */
+.hex.state.ma .top {
+	border-bottom: 7.5px solid #FF3333;
+}
+.hex.state.ma .middle {
+	background-color: #FF3333;
+}
+.hex.state.ma .bottom {
+	border-top: 7.5px solid #FF3333;
+}
+
+/* MI */
+.hex.state.mi .top {
+	border-bottom: 7.5px solid #AAAAAA;
+}
+.hex.state.mi .middle {
+	background-color: #AAAAAA;
+}
+.hex.state.mi .bottom {
+	border-top: 7.5px solid #AAAAAA;
+}
+
+/* MN */
+.hex.state.mn .top {
+	border-bottom: 7.5px solid #646EFF;
+}
+.hex.state.mn .middle {
+	background-color: #646EFF;
+}
+.hex.state.mn .bottom {
+	border-top: 7.5px solid #646EFF;
+}
+
+/* MS */
+.hex.state.ms .top {
+	border-bottom: 7.5px solid #666666;
+}
+.hex.state.ms .middle {
+	background-color: #666666;
+}
+.hex.state.ms .bottom {
+	border-top: 7.5px solid #666666;
+}
+
+/* MO */
+.hex.state.mo .top {
+	border-bottom: 7.5px solid #009999;
+}
+.hex.state.mo .middle {
+	background-color: #009999;
+}
+.hex.state.mo .bottom {
+	border-top: 7.5px solid #009999;
+}
+/* MT */
+.hex.state.mt .top {
+	border-bottom: 7.5px solid #0000CC;
+}
+.hex.state.mt .middle {
+	background-color: #0000CC;
+}
+.hex.state.mt .bottom {
+	border-top: 7.5px solid #0000CC;
+}
+
+/* NE-AL */
+.hex.state.ne .top {
+	border-bottom: 7.5px solid #FF6E64;
+}
+.hex.state.ne .middle {
+	background-color: #FF6E64;
+}
+.hex.state.ne .bottom {
+	border-top: 7.5px solid #FF6E64;
+}
+
+/* NE-1 */
+.hex.state.ne1 .top {
+	border-bottom: 7.5px solid #FF6E64;
+}
+.hex.state.ne1 .middle {
+	background-color: #FF6E64;
+}
+.hex.state.ne1 .bottom {
+	border-top: 7.5px solid #FF6E64;
+}
+
+/* NE-2 */
+.hex.state.ne2 .top {
+	border-bottom: 7.5px solid #FF6E64;
+}
+.hex.state.ne2 .middle {
+	background-color: #FF6E64;
+}
+.hex.state.ne2 .bottom {
+	border-top: 7.5px solid #FF6E64;
+}
+
+/* NE-3 */
+.hex.state.ne3 .top {
+	border-bottom: 7.5px solid #FF6E64;
+}
+.hex.state.ne3 .middle {
+	background-color: #FF6E64;
+}
+.hex.state.ne3 .bottom {
+	border-top: 7.5px solid #FF6E64;
+}
+
+/* NV */
+.hex.state.nv .top {
+	border-bottom: 7.5px solid #AA22AA;
+}
+.hex.state.nv .middle {
+	background-color: #AA22AA;
+}
+.hex.state.nv .bottom {
+	border-top: 7.5px solid #AA22AA;
+}
+
+/* NH */
+.hex.state.nh .top {
+	border-bottom: 7.5px solid #AA6666;
+}
+.hex.state.nh .middle {
+	background-color: #AA6666;
+}
+.hex.state.nh .bottom {
+	border-top: 7.5px solid #AA6666;
+}
+
+/* NJ */
+.hex.state.nj .top {
+	border-bottom: 7.5px solid #CCCCFF;
+}
+.hex.state.nj .middle {
+	background-color: #CCCCFF;
+}
+.hex.state.nj .bottom {
+	border-top: 7.5px solid #CCCCFF;
+}
+/* NM */
+.hex.state.nm .top {
+	border-bottom: 7.5px solid #FAFAFA;
+}
+.hex.state.nm .middle {
+	background-color: #FAFAFA;
+}
+.hex.state.nm .bottom {
+	border-top: 7.5px solid #FAFAFA;
+}
+
+/* NY */
+.hex.state.ny .top {
+	border-bottom: 7.5px solid #66FF66;
+}
+.hex.state.ny .middle {
+	background-color: #66FF66;
+}
+.hex.state.ny .bottom {
+	border-top: 7.5px solid #66FF66;
+}
+
+/* NC */
+.hex.state.nc .top {
+	border-bottom: 7.5px solid #22EE22;
+}
+.hex.state.nc .middle {
+	background-color: #22EE22;
+}
+.hex.state.nc .bottom {
+	border-top: 7.5px solid #22EE22;
+}
+
+/* ND */
+.hex.state.nd .top {
+	border-bottom: 7.5px solid #007700;
+}
+.hex.state.nd .middle {
+	background-color: #007700;
+}
+.hex.state.nd .bottom {
+	border-top: 7.5px solid #007700;
+}
+
+/* OH */
+.hex.state.oh .top {
+	border-bottom: 7.5px solid #00FFDD;
+}
+.hex.state.oh .middle {
+	background-color: #00FFDD;
+}
+.hex.state.oh .bottom {
+	border-top: 7.5px solid #00FFDD;
+}
+
+/* OK */
+.hex.state.ok .top {
+	border-bottom: 7.5px solid #22FF99;
+}
+.hex.state.ok .middle {
+	background-color: #22FF99;
+}
+.hex.state.ok .bottom {
+	border-top: 7.5px solid #22FF99;
+}
+
+/* OR */
+.hex.state.or .top {
+	border-bottom: 7.5px solid #64FFFF;
+}
+.hex.state.or .middle {
+	background-color: #64FFFF;
+}
+.hex.state.or .bottom {
+	border-top: 7.5px solid #64FFFF;
+}
+
+/* PA */
+.hex.state.pa .top {
+	border-bottom: 7.5px solid #2222CC;
+}
+.hex.state.pa .middle {
+	background-color: #2222CC;
+}
+.hex.state.pa .bottom {
+	border-top: 7.5px solid #2222CC;
+}
+/* RI */
+.hex.state.ri .top {
+	border-bottom: 7.5px solid #333366;
+}
+.hex.state.ri .middle {
+	background-color: #333366;
+}
+.hex.state.ri .bottom {
+	border-top: 7.5px solid #333366;
+}
+
+/* SC */
+.hex.state.sc .top {
+	border-bottom: 7.5px solid #333333;
+}
+.hex.state.sc .middle {
+	background-color: #333333;
+}
+.hex.state.sc .bottom {
+	border-top: 7.5px solid #333333;
+}
+
+/* SD */
+.hex.state.sd .top {
+	border-bottom: 7.5px solid #FFFF00;
+}
+.hex.state.sd .middle {
+	background-color: #FFFF00;
+}
+.hex.state.sd .bottom {
+	border-top: 7.5px solid #FFFF00;
+}
+
+/* TN */
+.hex.state.tn .top {
+	border-bottom: 7.5px solid #FFDD22;
+}
+.hex.state.tn .middle {
+	background-color: #FFDD22;
+}
+.hex.state.tn .bottom {
+	border-top: 7.5px solid #FFDD22;
+}
+
+/* TX */
+.hex.state.tx .top {
+	border-bottom: 7.5px solid #E9F944;
+}
+.hex.state.tx .middle {
+	background-color: #E9F944;
+}
+.hex.state.tx .bottom {
+	border-top: 7.5px solid #E9F944;
+}
+
+/* UT */
+.hex.state.ut .top {
+	border-bottom: 7.5px solid #33FF33;
+}
+.hex.state.ut .middle {
+	background-color: #33FF33;
+}
+.hex.state.ut .bottom {
+	border-top: 7.5px solid #33FF33;
+}
+
+/* VT */
+.hex.state.vt .top {
+	border-bottom: 7.5px solid #646E0F;
+}
+.hex.state.vt .middle {
+	background-color: #646E0F;
+}
+.hex.state.vt .bottom {
+	border-top: 7.5px solid #646E0F;
+}
+
+/* VA */
+.hex.state.va .top {
+	border-bottom: 7.5px solid #646E00;
+}
+.hex.state.va .middle {
+	background-color: #646E00;
+}
+.hex.state.va .bottom {
+	border-top: 7.5px solid #646E00;
+}
+/* WA */
+.hex.state.wa .top {
+	border-bottom: 7.5px solid #006EFF;
+}
+.hex.state.wa .middle {
+	background-color: #006EFF;
+}
+.hex.state.wa .bottom {
+	border-top: 7.5px solid #006EFF;
+}
+
+/* WV */
+.hex.state.wv .top {
+	border-bottom: 7.5px solid #FFFF64;
+}
+.hex.state.wv .middle {
+	background-color: #FFFF64;
+}
+.hex.state.wv .bottom {
+	border-top: 7.5px solid #FFFF64;
+}
+
+/* WI */
+.hex.state.wi .top {
+	border-bottom: 7.5px solid #FF0000;
+}
+.hex.state.wi .middle {
+	background-color: #FF0000;
+}
+.hex.state.wi .bottom {
+	border-top: 7.5px solid #FF0000;
+}
+
+/* WY */
+.hex.state.wy .top {
+	border-bottom: 7.5px solid #FF0000;
+}
+.hex.state.wy .middle {
+	background-color: #FF0000;
+}
+.hex.state.wy .bottom {
+	border-top: 7.5px solid #FF0000;
+}
+
+
+.hex.state:hover .top{
+    border-bottom: 7.5px solid #000000;
+}
+
+.hex.state:hover .middle {
+    background: #000000;
+}
+
+.hex.state:hover .bottom {
+    border-top: 7.5px solid #000000;
+}

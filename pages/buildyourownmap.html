@@ -1,0 +1,447 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="assets/styles/byom/byom.css">
+	<!--<link rel="stylesheet" type="text/css" href="assets/styles/ushouse.css">-->
+  	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  	<!--<script src="assets/js/senate.js"></script>-->
+  	<script src="assets/js/byom.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</html>
+<body>
+	<div id="topbar">
+		<div id="topbar_title">
+			Political - U.S. Trends
+		</div>
+		<div id="nav">
+			<a class="nav_button" id="political_button" href="home.html"> BACK </a>
+			<!--
+			<a class="nav_button" id="ec_button" href="electoralcollege.html"> President </a>
+			<a class="nav_button" id="house_button" href="ustrends.html"> Trends </a>
+			<a class="nav_button" id="senate_button" href="ussenate.html"> Senate </a>
+			-->
+		</div>
+	</div>
+	<div id="content">
+		<div class="map-container">
+			<div class="map-infobox">
+				<div class="swing-buttons">
+		        	<div class="heading"> Decade <span id="year"></span> </div>
+		        	<div class="button-flex">
+		        		<button class="decade_button" id="select_60" onclick="selectedDecade = changeDecade('60')"> 1960s </a>
+		        		<button class="decade_button" id="select_70" onclick="selectedDecade = changeDecade('70')"> 1970s </a>
+		          		<button class="decade_button" id="select_80" onclick="selectedDecade = changeDecade('80')"> 1980s </a>
+		        		<button class="decade_button" id="select_90" onclick="selectedDecade = changeDecade('90')"> 1990s </a>
+		        		<button class="decade_button" id="select_00" onclick="selectedDecade = changeDecade('00')"> 2000s </a>
+		        		<button class="decade_button" id="select_10" onclick="selectedDecade = changeDecade('10')"> 2010s </a>
+		        		<button class="decade_button" id="select_20" onclick="selectedDecade = changeDecade('20')"> 2020s </a>
+		        	</div>
+		      	</div>
+		      	<div class="lean-buttons">
+		      		<div class="heading"> Political Party Selected: <span id="party"></span> </div>
+		      		<div class="button-flex">
+		      			<button class="party_button" id="d-select" onclick="selectedParty = changeParty('D')"> Democratic </a>
+		        		<button class="party_button" id="r-select" onclick="selectedParty = changeParty('R')"> Republican </a>
+		          		<button class="party_button" id="none-select" onclick="selectedParty = changeParty('None')"> Blank </a>
+		        		<button class="party_button" id="grn-select" onclick="selectedParty = changeParty('G')"> Green </a>
+		        		<button class="party_button" id="yel-select" onclick="selectedParty = changeParty('Y')"> Yellow </a>
+		        		<button class="party_button" id="pur-select" onclick="selectedParty = changeParty('P')"> Purple </a>
+		        	</div>
+		      	</div>
+			</div>
+			<!--
+			<div class="meter-labels">
+		    	<h6> </h6>
+		    	<h6 id="safe-d-label"> Safe DEM </h6>
+		    	<h6 id="likely-d-label"> Likely DEM </h6>
+		    	<h6 id="lean-d-label"> Leans DEM </h6>
+		    	<h6 id="tossup-label"> Tossup </h6>
+		    	<h6 id="lean-r-label"> Leans GOP </h6>
+		    	<h6 id="likely-r-label"> Likely GOP </h6>
+		    	<h6 id="safe-r-label"> Safe GOP </h6>
+		    	<h6> </h6>
+		    </div>
+			-->
+		    <div class="meter-box">
+		      <div class="meter-dem"> DEM </div>
+		      <div class="meter"> 
+		        <div class="rating" id="safe-d"> </div>
+		        <div class="rating" id="likely-d"> </div>
+		        <div class="rating" id="lean-d"> </div>
+		        <div class="rating" id="barely-d"> </div>
+		        <div class="rating" id="tossup"> </div>
+		        <div class="rating" id="barely-r"> </div>
+		        <div class="rating" id="lean-r"> </div>
+		        <div class="rating" id="likely-r"> </div>
+		        <div class="rating" id="safe-r"> </div>
+		      </div>
+		      <div class="meter-rep"> REP </div> 
+		    </div>
+		</div>
+		<div class="map"> 
+			<div class="grid-row 1">
+				<div class="pixel state ak" onclick="changeState('ak', selectedParty)">
+					<div class="state-table">
+						<span id="ak"> AK </span>
+						<span class="ev" id="ak-ev"> 3 </span>
+					</div>
+				</div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel state me" onclick="changeState('me', selectedParty)">
+					<div class="state-table">
+						<span id="me">ME</span>
+						<span class="ev" id="me-ev"> 4 </span>
+					</div>
+				</div>
+			</div>
+			<div class="grid-row 3">
+				<div class="pixel"> </div>
+				<div class="pixel state wa" onclick="changeState('wa', selectedParty)">
+					<div class="state-table">
+						<span id="wa">WA</span>
+						<span class="ev" id="wa-ev"> 12 </span>
+					</div>
+				</div>
+				<div class="pixel state id" onclick="changeState('id', selectedParty)"> 
+					<div class="state-table">
+						<span id="id">ID</span> 
+						<span class="ev" id="id-ev"> 4 </span>
+					</div>
+				</div>
+				<div class="pixel state mt" onclick="changeState('mt', selectedParty)"> 
+					<div class="state-table">
+						<span id="mt">MT</span> 
+						<span class="ev" id="mt-ev"> 4 </span>
+					</div>
+				</div>
+				<div class="pixel state nd" onclick="changeState('nd', selectedParty)"> 
+					<div class="state-table">
+						<span id="nd">ND</span> 
+						<span class="ev" id="nd-ev"> 3 </span>
+					</div>
+				</div>
+				<div class="pixel state mn" onclick="changeState('mn', selectedParty)"> 
+					<div class="state-table">
+						<span id="mn">MN</span> 
+						<span class="ev" id="mn-ev"> 10 </span>
+					</div>
+				</div>
+				<div class="pixel state wi" onclick="changeState('wi', selectedParty)"> 
+					<div class="state-table">
+						<span id="wi">WI</span> 
+						<span class="ev" id="wi-ev"> 10 </span>
+					</div>
+				</div>
+				<div class="pixel state mi" onclick="changeState('mi', selectedParty)"> 
+					<div class="state-table">
+						<span id="mi">MI</span> 
+						<span class="ev" id="mi-ev"> 15 </span>
+					</div>
+				</div>
+				<div class="pixel state pa" onclick="changeState('pa', selectedParty)"> 
+					<div class="state-table">
+						<span id="pa">PA</span> 
+						<span class="ev" id="pa-ev"> 19 </span>
+					</div>
+				</div>
+				<div class="pixel state ny" onclick="changeState('ny', selectedParty)"> 
+					<div class="state-table">
+						<span id="ny">NY</span> 
+						<span class="ev" id="ny-ev"> 28 </span>
+					</div>
+				</div>
+				<div class="pixel state vt" onclick="changeState('vt', selectedParty)"> 
+					<div class="state-table">
+						<span id="vt">VT</span> 
+						<span class="ev" id="vt-ev"> 3 </span>
+					</div>
+				</div>
+				<div class="pixel state nh" onclick="changeState('nh', selectedParty)"> 
+					<div class="state-table">
+						<span id="nh">NH</span> 
+						<span class="ev" id="nh-ev"> 4 </span>
+					</div>
+				</div>
+				<div class="pixel"> </div>
+			</div>
+			<div class="grid-row 5">
+				<div class="pixel"> </div>
+				<div class="pixel state or" onclick="changeState('or', selectedParty)"> 
+					<div class="state-table">
+						<span id="or">OR</span> 
+						<span class="ev" id="or-ev"> 8 </span>
+					</div>
+				</div>
+				<div class="pixel state nv" onclick="changeState('nv', selectedParty)"> 
+					<div class="state-table">
+						<span id="nv">NV</span> 
+						<span class="ev" id="nv-ev"> 6 </span>
+					</div>
+				</div>
+				<div class="pixel state wy" onclick="changeState('wy', selectedParty)"> 
+					<div class="state-table">
+						<span id="wy">WY</span> 
+						<span class="ev" id="wy-ev"> 3 </span>
+					</div> 
+				</div>
+				<div class="pixel state sd" onclick="changeState('sd', selectedParty)"> 
+					<div class="state-table">
+						<span id="sd">SD</span> 
+						<span class="ev" id="sd-ev"> 3 </span>
+					</div>
+				</div>
+				<div class="pixel state ia" onclick="changeState('ia', selectedParty)"> 
+					<div class="state-table">
+						<span id="ia">IA</span> 
+						<span class="ev" id="ia-ev"> 6 </span>
+					</div>
+				</div>
+				<div class="pixel state il" onclick="changeState('il', selectedParty)"> 
+					<div class="state-table">
+						<span id="il">IL</span> 
+						<span class="ev" id="il-ev"> 19 </span>
+					</div>
+				</div>
+				<div class="pixel state oh" onclick="changeState('oh', selectedParty)"> 
+					<div class="state-table">
+						<span id="oh">OH</span> 
+						<span class="ev" id="oh-ev"> 17 </span>
+					</div>
+				</div>
+				<div class="pixel state va" onclick="changeState('va', selectedParty)"> 
+					<div class="state-table">
+						<span id="va">VA</span> 
+						<span class="ev" id="va-ev"> 13 </span>
+					</div>
+				</div>
+				<div class="pixel state nj" onclick="changeState('nj', selectedParty)"> 
+					<div class="state-table">
+						<span id="nj">NJ</span> 
+						<span class="ev" id="nj-ev"> 14 </span>
+					</div> 
+				</div>
+				<div class="pixel state ma" onclick="changeState('ma', selectedParty)"> 
+					<div class="state-table">
+						<span id="ma">MA</span> 
+						<span class="ev" id="ma-ev"> 11 </span>
+					</div> 
+				</div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+			</div>
+			<div class="grid-row 7">
+				<div class="pixel"> </div>
+				<div class="pixel state ca" onclick="changeState('ca', selectedParty)"> 
+					<div class="state-table">
+						<span id="ca">CA</span> 
+						<span class="ev" id="ca-ev"> 54 </span>
+					</div>
+				</div>
+				<div class="pixel state ut" onclick="changeState('ut', selectedParty)"> 
+					<div class="state-table">
+						<span id="ut">UT</span> 
+						<span class="ev" id="ut-ev"> 6 </span>
+					</div>
+				</div>
+				<div class="pixel state co" onclick="changeState('co', selectedParty)"> 
+					<div class="state-table">
+						<span id="co">CO</span> 
+						<span class="ev" id="co-ev"> 10 </span>
+					</div>
+				</div>
+				<div class="pixel state ne" onclick="changeState('ne', selectedParty)"> 
+					<div class="state-table">
+						<span id="ne">NE</span> 
+						<span class="ev" id="ne-ev"> 5 </span>
+					</div>
+				</div>
+				<div class="pixel state mo" onclick="changeState('mo', selectedParty)"> 
+					<div class="state-table">
+						<span id="mo">MO</span> 
+						<span class="ev" id="mo-ev"> 10 </span>
+					</div> 
+				</div>
+				<div class="pixel state in" onclick="changeState('in', selectedParty)"> 
+					<div class="state-table">
+						<span id="in">IN</span> 
+						<span class="ev" id="in-ev"> 11 </span>
+					</div> 
+				</div>
+				<div class="pixel state wv" onclick="changeState('wv', selectedParty)"> 
+					<div class="state-table">
+						<span id="wv">WV</span> 
+						<span class="ev" id="wv-ev"> 4 </span>
+					</div> 
+				</div>
+				<div class="pixel state nc" onclick="changeState('nc', selectedParty)"> 
+					<div class="state-table">
+						<span id="nc">NC</span> 
+						<span class="ev" id="nc-ev"> 16 </span>
+					</div>
+				</div>
+				<div class="pixel state de" onclick="changeState('de', selectedParty)"> 
+					<div class="state-table">
+						<span id="de">DE</span> 
+						<span class="ev" id="de-ev"> 3 </span>
+					</div>
+				</div>
+				<div class="pixel state ct" onclick="changeState('ct', selectedParty)"> 
+					<div class="state-table">
+						<span id="ct">CT</span> 
+						<span class="ev" id="ct-ev"> 7 </span>
+					</div> 
+				</div>
+				<div class="pixel state ri" onclick="changeState('ri', selectedParty)"> 
+					<div class="state-table">
+						<span id="ri">RI</span> 
+						<span class="ev" id="ri-ev"> 4 </span>
+					</div> 
+				</div>
+				<div class="pixel"> </div>
+			</div>
+			<div class="grid-row 9">
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel state az" onclick="changeState('az', selectedParty)"> 
+					<div class="state-table">
+						<span id="az">AZ</span> 
+						<span class="ev" id="az-ev"> 11 </span>
+					</div>
+				</div>
+				<div class="pixel state nm" onclick="changeState('nm', selectedParty)"> 
+					<div class="state-table">
+						<span id="nm">NM</span> 
+						<span class="ev" id="nm-ev"> 5 </span>
+					</div>
+				</div>
+				<div class="pixel state ks" onclick="changeState('ks', selectedParty)"> 
+					<div class="state-table">
+						<span id="ks">KS</span> 
+						<span class="ev" id="ks-ev"> 6 </span>
+					</div> 
+				</div>
+				<div class="pixel state ar" onclick="changeState('ar', selectedParty)"> 
+					<div class="state-table">
+						<span id="ar">AR</span> 
+						<span class="ev" id="ar-ev"> 6 </span>
+					</div>
+				</div>
+				<div class="pixel state ky" onclick="changeState('ky', selectedParty)"> 
+					<div class="state-table">
+						<span id="ky">KY</span> 
+						<span class="ev" id="ky-ev"> 8 </span>
+					</div> 
+				</div>
+				<div class="pixel state tn" onclick="changeState('tn', selectedParty)"> 
+					<div class="state-table">
+						<span id="tn">TN</span> 
+						<span class="ev" id="tn-ev"> 11 </span>
+					</div> 
+				</div>
+				<div class="pixel state sc" onclick="changeState('sc', selectedParty)"> 
+					<div class="state-table">
+						<span id="sc">SC</span> 
+						<span class="ev" id="sc-ev"> 9 </span>
+					</div> 
+				</div>
+				<div class="pixel state md" onclick="changeState('md', selectedParty)"> 
+					<div class="state-table">
+						<span id="md">MD</span> 
+						<span class="ev" id="md-ev"> 10 </span>
+					</div> 
+				</div>
+				<div class="pixel state dc" onclick="changeState('dc', selectedParty)"> 
+					<div class="state-table">
+						<span id="dc">DC</span> 
+						<span class="ev" id="dc-ev"> 3 </span>
+					</div> 
+				</div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+			</div>
+			<div class="grid-row 11">
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel state ok" onclick="changeState('ok', selectedParty)"> 
+					<div class="state-table">
+						<span id="ok">OK</span> 
+						<span class="ev" id="ok-ev"> 7 </span>
+					</div> 
+				</div>
+				<div class="pixel state la" onclick="changeState('la', selectedParty)"> 
+					<div class="state-table">
+						<span id="la">LA</span> 
+						<span class="ev" id="la-ev"> 8 </span>
+					</div> 
+				</div>
+				<div class="pixel state ms" onclick="changeState('ms', selectedParty)"> 
+					<div class="state-table">
+						<span id="ms">MS</span> 
+						<span class="ev" id="ms-ev"> 6 </span>
+					</div> 
+				</div>
+				<div class="pixel state al" onclick="changeState('al', selectedParty)"> 
+					<div class="state-table">
+						<span id="al">AL</span> 
+						<span class="ev" id="al-ev"> 9 </span>
+					</div> 
+				</div>
+				<div class="pixel state ga" onclick="changeState('ga', selectedParty)"> 
+					<div class="state-table">
+						<span id="ga">GA</span> 
+						<span class="ev" id="ga-ev"> 16 </span>
+					</div> 
+				</div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+			</div>
+			<div class="grid-row 13">
+				<div class="pixel state hi" onclick="changeState('hi', selectedParty)"> 
+					<div class="state-table">
+						<span id="hi">HI</span> 
+						<span class="ev" id="hi-ev"> 4 </span>
+					</div> 
+				</div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel state tx" onclick="changeState('tx', selectedParty)"> 
+					<div class="state-table">
+						<span id="tx">TX</span> 
+						<span class="ev" id="tx-ev"> 40 </span>
+					</div> 
+				</div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel state fl" onclick="changeState('fl', selectedParty)"> 
+					<div class="state-table">
+						<span id="fl">FL</span> 
+						<span class="ev" id="fl-ev"> 30 </span>
+					</div> 
+				</div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+			</div>
+		</div>
+	</div>
+	<script>
+		var selectedParty = "None";
+		var selectedDecade = "20";
+	</script>
+</body>

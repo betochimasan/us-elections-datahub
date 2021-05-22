@@ -1,0 +1,987 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="assets/styles/senate/senate.css">
+	<link rel="stylesheet" type="text/css" href="assets/styles/senate/senateseats_2020.css">
+  	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> 
+  	<script src="assets/js/senate.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</html>
+<body>
+	<div id="topbar">
+		<div id="topbar_title">
+			Political - U.S. Senate
+		</div>
+		<div id="nav">
+			<a class="nav_button" id="political_button" href="home.html"> BACK </a>
+
+		</div>
+	</div>
+	<div id="content">
+		<div class="map-container">
+			<div class="map-infobox">
+				<div class="year-buttons">
+		        	<div id="button-heading"> Senate Composition for: <span id="year"></span> 
+		        	</div>
+		      		<div class="button-flex">	
+		        		<a class="info_button" id="swing-00" href="senate_2000.html"> 2000 </a>
+		        		<a class="info_button" id="swing-02" href="senate_2002.html"> 2002 </a>
+		        		<a class="info_button" id="swing-04" href="senate_2004.html"> 2004 </a>
+		        		<a class="info_button" id="swing-06" href="senate_2006.html"> 2006 </a>
+		        		<a class="info_button" id="swing-08" href="senate_2008.html"> 2008 </a>
+		        		<a class="info_button" id="swing-10" href="senate_2010.html"> 2010 </a>
+		        		<a class="info_button" id="swing-12" href="senate_2012.html"> 2012 </a>
+		        		<a class="info_button" id="swing-14" href="senate_2014.html"> 2014 </a>
+		        		<a class="info_button" id="swing-16" href="senate_2016.html"> 2016 </a>
+		        		<a class="info_button" id="swing-18" href="senate_2018.html"> 2018 </a>
+		        		<a class="info_button" id="swing-20" href="senate_2020.html"> 2020 </a>
+		        	</div>
+		      	</div>
+			</div>
+			<!--
+			<div class="meter-labels">
+		    	<h6> </h6>
+		    	<h6 id="safe-d-label"> Safe DEM </h6>
+		    	<h6 id="likely-d-label"> Likely DEM </h6>
+		    	<h6 id="lean-d-label"> Leans DEM </h6>
+		    	<h6 id="tossup-label"> Tossup </h6>
+		    	<h6 id="lean-r-label"> Leans GOP </h6>
+		    	<h6 id="likely-r-label"> Likely GOP </h6>
+		    	<h6 id="safe-r-label"> Safe GOP </h6>
+		    	<h6> </h6>
+		    </div>
+		-->
+		    <div class="meter-box">
+		      <div class="meter-dem"> DEM </div>
+		      <div class="meter"> 
+		        <div class="rating" id="safe-d"> 50 + VP (Senate Control) </div>
+		        <!--
+		        <div class="rating" id="likely-d"> 3</div>
+		        <div class="rating" id="lean-d"> 2 </div>
+		        <div class="rating" id="barely-d"> </div>
+		        <div class="rating" id="tossup"> 2 </div>
+		        <div class="rating" id="barely-r"> </div>
+		        <div class="rating" id="lean-r"> 3 </div>
+		        <div class="rating" id="likely-r"> 7</div>
+		    	-->
+		        <div class="rating" id="safe-r"> 50 </div>
+		      </div>
+		      <div class="meter-rep"> REP </div> 
+		    </div>
+		</div>
+		<div class="popup" id="ak-2-info"> 
+			<div class="seat-name"> Alaska </div>
+			<div class="seat-rating sfr"> Republican Hold </div>
+			<div class="seat-holder"> Dan Sullivan </div>
+			<div class="seat-party r"> Republican </div>
+			<div class="seat-tenure"> Class 2 - Seat up in 2020 </div>
+		</div>
+		<div class="popup" id="ak-3-info"> 
+			<div class="seat-name"> Alaska </div>
+			<div class="seat-rating"> No election in 2020 </div>
+			<div class="seat-holder"> Lisa Murkowski </div>
+			<div class="seat-party r"> Republican </div>
+			<div class="seat-tenure"> Class 3 - Seat up in 2022 </div>
+		</div>
+		<div class="popup" id="me-1-info"> 
+			<div class="seat-name"> Maine </div>
+			<div class="seat-rating"> No election in 2020 </div>
+			<div class="seat-holder"> Angus King </div>
+			<div class="seat-party i"> Independent (D) </div>
+			<div class="seat-tenure"> Class 1 - Seat up in 2024 </div>
+		</div>
+		<div class="popup" id="me-2-info"> 
+			<div class="seat-name"> Maine </div>
+			<div class="seat-rating sfr"> Republican Hold </div>
+			<div class="seat-holder"> Susan Collins </div>
+			<div class="seat-party r"> Republican </div>
+			<div class="seat-tenure"> Class 2 - Seat up in 2020 </div>
+		</div>
+		<div class="popup" id="hi-1-info"> 
+			<div class="seat-name"> Hawaii </div>
+			<div class="seat-rating"> No election in 2020 </div>
+			<div class="seat-holder"> Mazie Hirono </div>
+			<div class="seat-party d"> Democrat </div>
+			<div class="seat-tenure"> Class 1 - Seat up in 2024 </div>
+		</div>
+		<div class="popup" id="hi-3-info"> 
+			<div class="seat-name"> Hawaii </div>
+			<div class="seat-rating"> No election in 2020 </div>
+			<div class="seat-holder"> Brian Schatz </div>
+			<div class="seat-party d"> Democrat </div>
+			<div class="seat-tenure"> Class 3 - Seat up in 2022 </div>
+		</div>
+		<div class="map"> 
+			<div class="grid-row 1">
+				<div class="pixel state ak c2" onclick="openInfoBox('ak-2-info')"> <span id="ak-2">AK</span> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel state me c1" onclick="openInfoBox('me-1-info')"> <span id="me-1">ME</span> </div>
+			</div>
+			<div class="grid-row even 2">
+				<div class="pixel state ak c3" onclick="openInfoBox('ak-3-info')"> <span id="ak-3">AK</span> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel state me c2" onclick="openInfoBox('me-2-info')"> <span id="me-2">ME</span> </div>
+			</div>
+			<div class="grid-row 3">
+				<div class="pixel"> </div>
+				<div class="pixel state wa c1" onclick="openInfoBox('wa-1-info')"> <span id="wa-1">WA</span> </div>
+				<div class="pixel state id c2" onclick="openInfoBox('id-2-info')"> <span id="id-2">ID</span> </div>
+				<div class="pixel state mt c1" onclick="openInfoBox('mt-1-info')"> <span id="mt-1">MT</span> </div>
+				<div class="pixel state nd c1" onclick="openInfoBox('nd-1-info')"> <span id="nd-1">ND</span> </div>
+				<div class="pixel state mn c1" onclick="openInfoBox('mn-1-info')"> <span id="mn-1">MN</span> </div>
+				<div class="pixel state wi c1" onclick="openInfoBox('wi-1-info')"> <span id="wi-1">WI</span> </div>
+				<div class="pixel state mi c1" onclick="openInfoBox('mi-1-info')"> <span id="mi-1">MI</span> </div>
+				<div class="pixel state pa c1" onclick="openInfoBox('pa-1-info')"> <span id="pa-1">PA</span> </div>
+				<div class="pixel state ny c1" onclick="openInfoBox('ny-1-info')"> <span id="ny-1">NY</span> </div>
+				<div class="pixel state vt c1" onclick="openInfoBox('vt-1-info')"> <span id="vt-1">VT</span> </div>
+				<div class="pixel state nh c2" onclick="openInfoBox('nh-2-info')"> <span id="nh-2">NH</span> </div>
+				<div class="pixel"> </div>
+			</div>
+			<div class="grid-row even 4">
+				<div class="pixel"> </div>
+				<div class="pixel state wa c3" onclick="openInfoBox('wa-3-info')"> <span id="wa-3">WA</span> </div>
+				<div class="pixel state id c3" onclick="openInfoBox('id-3-info')"> <span id="id-3">ID</span> </div>
+				<div class="pixel state mt c2" onclick="openInfoBox('mt-2-info')"> <span id="mt-2">MT</span> </div>
+				<div class="pixel state nd c3" onclick="openInfoBox('nd-3-info')"> <span id="nd-3">ND</span> </div>
+				<div class="pixel state mn c2" onclick="openInfoBox('mn-2-info')"> <span id="mn-2">MN</span> </div>
+				<div class="pixel state wi c3" onclick="openInfoBox('wi-3-info')"> <span id="wi-3">WI</span> </div>
+				<div class="pixel state mi c2" onclick="openInfoBox('mi-2-info')"> <span id="mi-2">MI</span> </div>
+				<div class="pixel state pa c3" onclick="openInfoBox('pa-3-info')"> <span id="pa-3">PA</span> </div>
+				<div class="pixel state ny c3" onclick="openInfoBox('ny-3-info')"> <span id="ny-3">NY</span> </div>
+				<div class="pixel state vt c3" onclick="openInfoBox('vt-3-info')"> <span id="vt-3">VT</span> </div>
+				<div class="pixel state nh c3" onclick="openInfoBox('nh-3-info')"> <span id="nh-3">NH</span> </div>
+				<div class="pixel"> </div>
+			</div>
+			<div class="grid-row 5">
+				<div class="pixel"> </div>
+				<div class="pixel state or c2" onclick="openInfoBox('or-2-info')"> <span id="or-2">OR</span> </div>
+				<div class="pixel state nv c1" onclick="openInfoBox('nv-1-info')"> <span id="nv-1">NV</span> </div>
+				<div class="pixel state wy c1" onclick="openInfoBox('wy-1-info')"> <span id="wy-1">WY</span> </div>
+				<div class="pixel state sd c2" onclick="openInfoBox('sd-2-info')"> <span id="sd-2">SD</span> </div>
+				<div class="pixel state ia c2" onclick="openInfoBox('ia-2-info')"> <span id="ia-2">IA</span> </div>
+				<div class="pixel state il c2" onclick="openInfoBox('il-2-info')"> <span id="il-2">IL</span> </div>
+				<div class="pixel state oh c1" onclick="openInfoBox('oh-1-info')"> <span id="oh-1">OH</span> </div>
+				<div class="pixel state va c1" onclick="openInfoBox('va-1-info')"> <span id="va-1">VA</span> </div>
+				<div class="pixel state nj c1" onclick="openInfoBox('nj-1-info')"> <span id="nj-1">NJ</span> </div>
+				<div class="pixel state ma c1" onclick="openInfoBox('ma-1-info')"> <span id="ma-1">MA</span> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+			</div>
+			<div class="grid-row even 6">
+				<div class="pixel"> </div>
+				<div class="pixel state or c3" onclick="openInfoBox('or-3-info')"> <span id="or-3">OR</span> </div>
+				<div class="pixel state nv c3" onclick="openInfoBox('nv-3-info')"> <span id="nv-3">NV</span> </div>
+				<div class="pixel state wy c2" onclick="openInfoBox('wy-2-info')"> <span id="wy-2">WY</span> </div>
+				<div class="pixel state sd c3" onclick="openInfoBox('sd-3-info')"> <span id="sd-3">SD</span> </div>
+				<div class="pixel state ia c3" onclick="openInfoBox('ia-3-info')"> <span id="ia-3">IA</span> </div>
+				<div class="pixel state il c3" onclick="openInfoBox('il-3-info')"> <span id="il-3">IL</span> </div>
+				<div class="pixel state oh c3" onclick="openInfoBox('oh-3-info')"> <span id="oh-3">OH</span> </div>
+				<div class="pixel state va c2" onclick="openInfoBox('va-2-info')"> <span id="va-2">VA</span> </div>
+				<div class="pixel state nj c2" onclick="openInfoBox('nj-2-info')"> <span id="nj-2">NJ</span> </div>
+				<div class="pixel state ma c2" onclick="openInfoBox('ma-2-info')"> <span id="ma-2">MA</span> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+			</div>
+			<div class="grid-row 7">
+				<div class="pixel"> </div>
+				<div class="pixel state ca c1" onclick="openInfoBox('ca-1-info')"> <span id="ca-1">CA</span> </div>
+				<div class="pixel state ut c1" onclick="openInfoBox('ut-1-info')"> <span id="ut-1">UT</span> </div>
+				<div class="pixel state co c2" onclick="openInfoBox('co-2-info')"> <span id="co-2">CO</span> </div>
+				<div class="pixel state ne c1" onclick="openInfoBox('ne-1-info')"> <span id="ne-1">NE</span> </div>
+				<div class="pixel state mo c1" onclick="openInfoBox('mo-1-info')"> <span id="mo-1">MO</span> </div>
+				<div class="pixel state in c1" onclick="openInfoBox('in-1-info')"> <span id="in-1">IN</span> </div>
+				<div class="pixel state wv c1" onclick="openInfoBox('wv-1-info')"> <span id="wv-1">WV</span> </div>
+				<div class="pixel state nc c2" onclick="openInfoBox('nc-2-info')"> <span id="nc-2">NC</span> </div>
+				<div class="pixel state de c1" onclick="openInfoBox('de-1-info')"> <span id="de-1">DE</span> </div>
+				<div class="pixel state ct c1" onclick="openInfoBox('ct-1-info')"> <span id="ct-1">CT</span> </div>
+				<div class="pixel state ri c1" onclick="openInfoBox('ri-1-info')"> <span id="ri-1">RI</span> </div>
+				<div class="pixel"> </div>
+			</div>
+			<div class="grid-row even 8">
+				<div class="pixel"> </div>
+				<div class="pixel state ca c3" onclick="openInfoBox('ca-3-info')"> <span id="ca-3">CA</span> </div>
+				<div class="pixel state ut c3" onclick="openInfoBox('ut-3-info')"> <span id="ut-3">UT</span> </div>
+				<div class="pixel state co c3" onclick="openInfoBox('co-3-info')"> <span id="co-3">CO</span> </div>
+				<div class="pixel state ne c2" onclick="openInfoBox('ne-2-info')"> <span id="ne-2">NE</span> </div>
+				<div class="pixel state mo c3" onclick="openInfoBox('mo-3-info')"> <span id="mo-3">MO</span> </div>
+				<div class="pixel state in c3" onclick="openInfoBox('in-3-info')"> <span id="in-3">IN</span> </div>
+				<div class="pixel state wv c2" onclick="openInfoBox('wv-2-info')"> <span id="wv-2">WV</span> </div>
+				<div class="pixel state nc c3" onclick="openInfoBox('nc-3-info')"> <span id="nc-3">NC</span> </div>
+				<div class="pixel state de c2" onclick="openInfoBox('de-2-info')"> <span id="de-2">DE</span> </div>
+				<div class="pixel state ct c3" onclick="openInfoBox('ct-3-info')"> <span id="ct-3">CT</span> </div>
+				<div class="pixel state ri c2" onclick="openInfoBox('ri-2-info')"> <span id="ri-2">RI</span> </div>
+				<div class="pixel"> </div>
+			</div>
+			<div class="grid-row 9">
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel state az c1" onclick="openInfoBox('az-1-info')"> <span id="az-1">AZ</span> </div>
+				<div class="pixel state nm c1" onclick="openInfoBox('nm-1-info')"> <span id="nm-1">NM</span> </div>
+				<div class="pixel state ks c2" onclick="openInfoBox('ks-2-info')"> <span id="ks-2">KS</span> </div>
+				<div class="pixel state ar c2" onclick="openInfoBox('ar-2-info')"> <span id="ar-2">AR</span> </div>
+				<div class="pixel state ky c2" onclick="openInfoBox('ky-2-info')"> <span id="ky-2">KY</span> </div>
+				<div class="pixel state tn c1" onclick="openInfoBox('tn-1-info')"> <span id="tn-1">TN</span> </div>
+				<div class="pixel state sc c2" onclick="openInfoBox('sc-2-info')"> <span id="sc-2">SC</span> </div>
+				<div class="pixel state md c1" onclick="openInfoBox('md-1-info')"> <span id="md-1">MD</span> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+			</div>
+			<div class="grid-row even 10">
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel state az c3" onclick="openInfoBox('az-3-info')"> <span id="az-3">AZ</span> </div>
+				<div class="pixel state nm c2" onclick="openInfoBox('nm-2-info')"> <span id="nm-2">NM</span> </div>
+				<div class="pixel state ks c3" onclick="openInfoBox('ks-3-info')"> <span id="ks-3">KS</span> </div>
+				<div class="pixel state ar c3" onclick="openInfoBox('ar-3-info')"> <span id="ar-3">AR</span> </div>
+				<div class="pixel state ky c3" onclick="openInfoBox('ky-3-info')"> <span id="ky-3">KY</span> </div>
+				<div class="pixel state tn c2" onclick="openInfoBox('tn-2-info')"> <span id="tn-2">TN</span> </div>
+				<div class="pixel state sc c3" onclick="openInfoBox('sc-3-info')"> <span id="sc-3">SC</span> </div>
+				<div class="pixel state md c3" onclick="openInfoBox('md-3-info')"> <span id="md-3">MD</span> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+			</div>
+			<div class="grid-row 11">
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel state ok c2" onclick="openInfoBox('ok-2-info')"> <span id="ok-2">OK</span> </div>
+				<div class="pixel state la c2" onclick="openInfoBox('la-2-info')"> <span id="la-2">LA</span> </div>
+				<div class="pixel state ms c1" onclick="openInfoBox('ms-1-info')"> <span id="ms-1">MS</span> </div>
+				<div class="pixel state al c2" onclick="openInfoBox('al-2-info')"> <span id="al-2">AL</span> </div>
+				<div class="pixel state ga c2" onclick="openInfoBox('ga-2-info')"> <span id="ga-2">GA</span> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+			</div>
+			<div class="grid-row even 12">
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel state ok c3" onclick="openInfoBox('ok-3-info')"> <span id="ok-3">OK</span> </div>
+				<div class="pixel state la c3" onclick="openInfoBox('la-3-info')"> <span id="la-3">LA</span> </div>
+				<div class="pixel state ms c2" onclick="openInfoBox('ms-2-info')"> <span id="ms-2">MS</span> </div>
+				<div class="pixel state al c3" onclick="openInfoBox('al-3-info')"> <span id="al-3">AL</span> </div>
+				<div class="pixel state ga c3" onclick="openInfoBox('ga-3-info')"> <span id="ga-3">GA</span> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+			</div>
+			<div class="grid-row 13">
+				<div class="pixel state hi c1" onclick="openInfoBox('hi-1-info')"> <span id="hi-1">HI</span> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel state tx c1" onclick="openInfoBox('tx-1-info')"> <span id="tx-1">TX</span> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel state fl c1" onclick="openInfoBox('fl-1-info')"> <span id="fl-1">FL</span> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+			</div>
+			<div class="grid-row even 14">
+				<div class="pixel state hi c3" onclick="openInfoBox('hi-3-info')"> <span id="hi-3">HI</span> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel state tx c2" onclick="openInfoBox('tx-2-info')"> <span id="tx-2">TX</span> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel state fl c3" onclick="openInfoBox('fl-3-info')"> <span id="fl-3">FL</span> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+			</div>
+		</div>
+		<div class="popup-container"> 
+			<div class="popup" id="al-2-info"> 
+				<div class="seat-name"> Alabama </div>
+				<div class="seat-rating lnr"> Republican Gain </div>
+				<div class="seat-holder"> Tommy Tuberville </div>
+				<div class="seat-party r"> Republican </div>
+				<div class="seat-tenure"> Class 2 - Seat up in 2020 </div>
+			</div>
+			<div class="popup" id="al-3-info"> 
+				<div class="seat-name"> Alabama </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Richard Shelby </div>
+				<div class="seat-party r"> Republican </div>
+				<div class="seat-tenure"> Class 3 - Seat up in 2022 </div>
+			</div>
+			<div class="popup" id="az-1-info"> 
+				<div class="seat-name"> Arizona </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Kyrsten Sinema </div>
+				<div class="seat-party d"> Democrat </div>
+				<div class="seat-tenure"> Class 1 - Seat up in 2024 </div>
+			</div>
+			<div class="popup" id="az-3-info"> 
+				<div class="seat-name"> Arizona </div>
+				<div class="seat-rating lnd"> Democratic Gain </div>
+				<div class="seat-holder"> Mark Kelly </div>
+				<div class="seat-party d"> Democrat </div>
+				<div class="seat-tenure"> Class 3 - Seat up in 2022 </div>
+			</div>
+			<div class="popup" id="ar-2-info"> 
+				<div class="seat-name"> Arkansas </div>
+				<div class="seat-rating sfr"> Republican Hold </div>
+				<div class="seat-holder"> Tom Cotton </div>
+				<div class="seat-party r"> Republican </div>
+				<div class="seat-tenure"> Class 2 - Seat up in 2020 </div>
+			</div>
+			<div class="popup" id="ar-3-info"> 
+				<div class="seat-name"> Arkansas </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> John Boozman </div>
+				<div class="seat-party r"> Republican </div>
+				<div class="seat-tenure"> Class 3 - Seat up in 2022 </div>
+			</div>
+			<div class="popup" id="ca-1-info"> 
+				<div class="seat-name"> California </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Dianne Feinstein </div>
+				<div class="seat-party d"> Democrat </div>
+				<div class="seat-tenure"> Class 1 - Seat up in 2024 </div>
+			</div>
+			<div class="popup" id="ca-3-info"> 
+				<div class="seat-name"> California </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Kamala Harris </div>
+				<div class="seat-party d"> Democrat </div>
+				<div class="seat-tenure"> Class 3 - Seat up in 2022 </div>
+			</div>
+			<div class="popup" id="co-2-info"> 
+				<div class="seat-name"> Colorado </div>
+				<div class="seat-rating lnd"> Democratic Gain </div>
+				<div class="seat-holder"> John Hickenlooper </div>
+				<div class="seat-party d"> Democrat </div>
+				<div class="seat-tenure"> Class 2 - Seat up in 2020 </div>
+			</div>
+			<div class="popup" id="co-3-info"> 
+				<div class="seat-name"> Colorado </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Michael Bennet </div>
+				<div class="seat-party d"> Democrat </div>
+				<div class="seat-tenure"> Class 3 - Seat up in 2022 </div>
+			</div>
+			<div class="popup" id="ct-1-info"> 
+				<div class="seat-name"> Connecticut </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Chris Murphy </div>
+				<div class="seat-party d"> Democrat </div>
+				<div class="seat-tenure"> Class 1 - Seat up in 2024 </div>
+			</div>
+			<div class="popup" id="ct-3-info"> 
+				<div class="seat-name"> Connecticut </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Richard Blumenthal </div>
+				<div class="seat-party d"> Democrat </div>
+				<div class="seat-tenure"> Class 3 - Seat up in 2022 </div>
+			</div>
+			<div class="popup" id="de-1-info"> 
+				<div class="seat-name"> Delaware </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Tom Carper </div>
+				<div class="seat-party d"> Democrat </div>
+				<div class="seat-tenure"> Class 1 - Seat up in 2024 </div>
+			</div>
+			<div class="popup" id="de-2-info"> 
+				<div class="seat-name"> Delaware </div>
+				<div class="seat-rating sfd"> Democratic Hold </div>
+				<div class="seat-holder"> Chris Coons </div>
+				<div class="seat-party d"> Democrat </div>
+				<div class="seat-tenure"> Class 2 - Seat up in 2020 </div>
+			</div>
+			<div class="popup" id="fl-1-info"> 
+				<div class="seat-name"> Florida </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Rick Scott </div>
+				<div class="seat-party r"> Republican </div>
+				<div class="seat-tenure"> Class 1 - Seat up in 2024 </div>
+			</div>
+			<div class="popup" id="fl-3-info"> 
+				<div class="seat-name"> Florida </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Marco Rubio </div>
+				<div class="seat-party r"> Republican </div>
+				<div class="seat-tenure"> Class 3 - Seat up in 2022 </div>
+			</div>
+			<div class="popup" id="ga-2-info"> 
+				<div class="seat-name"> Georgia </div>
+				<div class="seat-rating lnd"> Democratic Gain </div>
+				<div class="seat-holder"> Jon Ossoff </div>
+				<div class="seat-party d"> Democrat </div>
+				<div class="seat-tenure"> Class 2 - Seat up in 2020 </div>
+			</div>
+			<div class="popup" id="ga-3-info"> 
+				<div class="seat-name"> Georgia </div>
+				<div class="seat-rating lnd"> Democratic Gain </div>
+				<div class="seat-holder"> Rafael Warnock </div>
+				<div class="seat-party d"> Democrat </div>
+				<div class="seat-tenure"> Class 3 - Seat up in 2022 </div>
+			</div>
+			<div class="popup" id="id-2-info"> 
+				<div class="seat-name"> Idaho </div>
+				<div class="seat-rating sfr"> Republican Hold </div>
+				<div class="seat-holder"> Jim Risch </div>
+				<div class="seat-party r"> Republican </div>
+				<div class="seat-tenure"> Class 2 - Seat up in 2020 </div>
+			</div>
+			<div class="popup" id="id-3-info"> 
+				<div class="seat-name"> Idaho </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Mike Crapo </div>
+				<div class="seat-party r"> Republican </div>
+				<div class="seat-tenure"> Class 3 - Seat up in 2022 </div>
+			</div>
+			<div class="popup" id="il-2-info"> 
+				<div class="seat-name"> Illinois </div>
+				<div class="seat-rating sfd"> Democratic Hold </div>
+				<div class="seat-holder"> Dick Durbin </div>
+				<div class="seat-party d"> Democrat </div>
+				<div class="seat-tenure"> Class 2 - Seat up in 2020 </div>
+			</div>
+			<div class="popup" id="il-3-info"> 
+				<div class="seat-name"> Illinois </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Tammy Duckworth </div>
+				<div class="seat-party d"> Democrat </div>
+				<div class="seat-tenure"> Class 3 - Seat up in 2022 </div>
+			</div>
+			<div class="popup" id="in-1-info"> 
+				<div class="seat-name"> Indiana </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Mike Braun </div>
+				<div class="seat-party r"> Republican </div>
+				<div class="seat-tenure"> Class 1 - Seat up in 2024 </div>
+			</div>
+			<div class="popup" id="in-3-info"> 
+				<div class="seat-name"> Indiana </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Todd Young </div>
+				<div class="seat-party r"> Republican </div>
+				<div class="seat-tenure"> Class 3 - Seat up in 2022 </div>
+			</div>
+			<div class="popup" id="ia-2-info"> 
+				<div class="seat-name"> Iowa </div>
+				<div class="seat-rating sfr"> Republican Hold </div>
+				<div class="seat-holder"> Joni Ernst </div>
+				<div class="seat-party r"> Republican </div>
+				<div class="seat-tenure"> Class 2 - Seat up in 2020 </div>
+			</div>
+			<div class="popup" id="ia-3-info"> 
+				<div class="seat-name"> Iowa </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Chuck Grassley </div>
+				<div class="seat-party r"> Republican </div>
+				<div class="seat-tenure"> Class 3 - Seat up in 2022 </div>
+			</div>
+			<div class="popup" id="ks-2-info"> 
+				<div class="seat-name"> Kansas </div>
+				<div class="seat-rating sfr"> Republican Hold </div>
+				<div class="seat-holder"> Roger Marshall </div>
+				<div class="seat-party r"> Republican </div>
+				<div class="seat-tenure"> Class 2 - Seat up in 2020 </div>
+			</div>
+			<div class="popup" id="ks-3-info"> 
+				<div class="seat-name"> Kansas </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Jerry Moran </div>
+				<div class="seat-party r"> Republican </div>
+				<div class="seat-tenure"> Class 3 - Seat up in 2022 </div>
+			</div>
+			<div class="popup" id="ky-2-info"> 
+				<div class="seat-name"> Kentucky </div>
+				<div class="seat-rating sfr"> Republican Hold </div>
+				<div class="seat-holder"> Mitch McConnell </div>
+				<div class="seat-party r"> Republican </div>
+				<div class="seat-tenure"> Class 2 - Seat up in 2020 </div>
+			</div>
+			<div class="popup" id="ky-3-info"> 
+				<div class="seat-name"> Kentucky </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Rand Paul </div>
+				<div class="seat-party r"> Republican </div>
+				<div class="seat-tenure"> Class 3 - Seat up in 2022 </div>
+			</div>
+			<div class="popup" id="la-2-info"> 
+				<div class="seat-name"> Louisiana </div>
+				<div class="seat-rating sfr"> Republican Hold </div>
+				<div class="seat-holder"> Bill Cassidy </div>
+				<div class="seat-party r"> Republican </div>
+				<div class="seat-tenure"> Class 2 - Seat up in 2020 </div>
+			</div>
+			<div class="popup" id="la-3-info"> 
+				<div class="seat-name"> Louisiana </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> John Kennedy </div>
+				<div class="seat-party r"> Republican </div>
+				<div class="seat-tenure"> Class 3 - Seat up in 2022 </div>
+			</div>
+			<div class="popup" id="md-1-info"> 
+				<div class="seat-name"> Maryland </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Ben Cardin </div>
+				<div class="seat-party d"> Democrat </div>
+				<div class="seat-tenure"> Class 1 - Seat up in 2024 </div>
+			</div>
+			<div class="popup" id="md-3-info"> 
+				<div class="seat-name"> Maryland </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Chris Van Hollen </div>
+				<div class="seat-party d"> Democrat </div>
+				<div class="seat-tenure"> Class 3 - Seat up in 2022 </div>
+			</div>
+			<div class="popup" id="ma-1-info"> 
+				<div class="seat-name"> Massachusetts </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Elizabeth Warren </div>
+				<div class="seat-party d"> Democrat </div>
+				<div class="seat-tenure"> Class 1 - Seat up in 2024 </div>
+			</div>
+			<div class="popup" id="ma-2-info"> 
+				<div class="seat-name"> Massachusetts </div>
+				<div class="seat-rating sfd"> Democratic Hold </div>
+				<div class="seat-holder"> Ed Markey </div>
+				<div class="seat-party d"> Democrat </div>
+				<div class="seat-tenure"> Class 2 - Seat up in 2020 </div>
+			</div>
+			<div class="popup" id="mi-1-info"> 
+				<div class="seat-name"> Michigan </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Debbie Stabenow </div>
+				<div class="seat-party d"> Democrat </div>
+				<div class="seat-tenure"> Class 1 - Seat up in 2024 </div>
+			</div>
+			<div class="popup" id="mi-2-info"> 
+				<div class="seat-name"> Michigan </div>
+				<div class="seat-rating sfd"> Democratic Hold </div>
+				<div class="seat-holder"> Gary Peters </div>
+				<div class="seat-party d"> Democrat </div>
+				<div class="seat-tenure"> Class 2 - Seat up in 2020 </div>
+			</div>
+			<div class="popup" id="mn-1-info"> 
+				<div class="seat-name"> Minnesota </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Amy Klobuchar </div>
+				<div class="seat-party d"> Democrat </div>
+				<div class="seat-tenure"> Class 1 - Seat up in 2024 </div>
+			</div>
+			<div class="popup" id="mn-2-info"> 
+				<div class="seat-name"> Minnesota </div>
+				<div class="seat-rating sfd"> Democratic Hold </div>
+				<div class="seat-holder"> Tina Smith </div>
+				<div class="seat-party d"> Democrat </div>
+				<div class="seat-tenure"> Class 2 - Seat up in 2020 </div>
+			</div>
+			<div class="popup" id="ms-1-info"> 
+				<div class="seat-name"> Mississippi </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Roger Wicker </div>
+				<div class="seat-party r"> Republican </div>
+				<div class="seat-tenure"> Class 1 - Seat up in 2024 </div>
+			</div>
+			<div class="popup" id="ms-2-info"> 
+				<div class="seat-name"> Mississippi </div>
+				<div class="seat-rating sfr"> Republican Hold </div>
+				<div class="seat-holder"> Cindy Hyde Smith </div>
+				<div class="seat-party r"> Republican </div>
+				<div class="seat-tenure"> Class 2 - Seat up in 2020 </div>
+			</div>
+			<div class="popup" id="mo-1-info"> 
+				<div class="seat-name"> Missouri </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Josh Hawley </div>
+				<div class="seat-party r"> Republican </div>
+				<div class="seat-tenure"> Class 1 - Seat up in 2024 </div>
+			</div>
+			<div class="popup" id="mo-3-info"> 
+				<div class="seat-name"> Missouri </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Roy Blunt </div>
+				<div class="seat-party r"> Republican </div>
+				<div class="seat-tenure"> Class 3 - Seat up in 2022 </div>
+			</div>
+			<div class="popup" id="mt-1-info"> 
+				<div class="seat-name"> Montana </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Jon Tester </div>
+				<div class="seat-party d"> Democrat </div>
+				<div class="seat-tenure"> Class 1 - Seat up in 2024 </div>
+			</div>
+			<div class="popup" id="mt-2-info"> 
+				<div class="seat-name"> Montana </div>
+				<div class="seat-rating sfr"> Republican Hold </div>
+				<div class="seat-holder"> Steve Daines </div>
+				<div class="seat-party r"> Republican </div>
+				<div class="seat-tenure"> Class 2 - Seat up in 2020 </div>
+			</div>
+			<div class="popup" id="ne-1-info"> 
+				<div class="seat-name"> Nebraska </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Deb Fischer </div>
+				<div class="seat-party r"> Republican </div>
+				<div class="seat-tenure"> Class 1 - Seat up in 2024 </div>
+			</div>
+			<div class="popup" id="ne-2-info"> 
+				<div class="seat-name"> Nebraska </div>
+				<div class="seat-rating sfr"> Republican Hold </div>
+				<div class="seat-holder"> Ben Sasse </div>
+				<div class="seat-party r"> Republican </div>
+				<div class="seat-tenure"> Class 2 - Seat up in 2020 </div>
+			</div>
+			<div class="popup" id="nv-1-info"> 
+				<div class="seat-name"> Nevada </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Jacky Rosen </div>
+				<div class="seat-party d"> Democrat </div>
+				<div class="seat-tenure"> Class 1 - Seat up in 2024 </div>
+			</div>
+			<div class="popup" id="nv-3-info"> 
+				<div class="seat-name"> Nevada </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Catherine Cortez Masto </div>
+				<div class="seat-party d"> Democrat </div>
+				<div class="seat-tenure"> Class 3 - Seat up in 2022 </div>
+			</div>
+			<div class="popup" id="nh-2-info"> 
+				<div class="seat-name"> New Hampshire </div>
+				<div class="seat-rating sfd"> Democratic Hold </div>
+				<div class="seat-holder"> Jeanne Shaheen </div>
+				<div class="seat-party d"> Democrat </div>
+				<div class="seat-tenure"> Class 2 - Seat up in 2020 </div>
+			</div>
+			<div class="popup" id="nh-3-info"> 
+				<div class="seat-name"> New Hampshire </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Maggie Hassan </div>
+				<div class="seat-party d"> Democrat </div>
+				<div class="seat-tenure"> Class 3 - Seat up in 2022 </div>
+			</div>
+
+			<div class="popup" id="nj-1-info"> 
+				<div class="seat-name"> New Jersey </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Bob Menendez </div>
+				<div class="seat-party d"> Democrat </div>
+				<div class="seat-tenure"> Class 1 - Seat up in 2024 </div>
+			</div>
+			<div class="popup" id="nj-2-info"> 
+				<div class="seat-name"> New Jersey </div>
+				<div class="seat-rating sfd"> Democratic Hold </div>
+				<div class="seat-holder"> Cory Booker </div>
+				<div class="seat-party d"> Democrat </div>
+				<div class="seat-tenure"> Class 2 - Seat up in 2020 </div>
+			</div>
+			<div class="popup" id="nm-1-info"> 
+				<div class="seat-name"> New Mexico </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Martin Heinrich </div>
+				<div class="seat-party d"> Democrat </div>
+				<div class="seat-tenure"> Class 1 - Seat up in 2024 </div>
+			</div>
+			<div class="popup" id="nm-2-info"> 
+				<div class="seat-name"> New Mexico </div>
+				<div class="seat-rating sfd"> Democratic Hold </div>
+				<div class="seat-holder"> Tom Udall </div>
+				<div class="seat-party d"> Democrat </div>
+				<div class="seat-tenure"> Class 2 - Seat up in 2020 </div>
+			</div>
+			<div class="popup" id="ny-1-info"> 
+				<div class="seat-name"> New York </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Kirsten Gillibrand </div>
+				<div class="seat-party d"> Democrat </div>
+				<div class="seat-tenure"> Class 1 - Seat up in 2024 </div>
+			</div>
+			<div class="popup" id="ny-3-info"> 
+				<div class="seat-name"> New York </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Chuck Schumer </div>
+				<div class="seat-party d"> Democrat </div>
+				<div class="seat-tenure"> Class 3 - Seat up in 2022 </div>
+			</div>
+			<div class="popup" id="nc-2-info"> 
+				<div class="seat-name"> North Carolina </div>
+				<div class="seat-rating sfr"> Republican Hold </div>
+				<div class="seat-holder"> Thom Tillis </div>
+				<div class="seat-party r"> Republican </div>
+				<div class="seat-tenure"> Class 2 - Seat up in 2020 </div>
+			</div>
+			<div class="popup" id="nc-3-info"> 
+				<div class="seat-name"> North Carolina </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Richard Burr </div>
+				<div class="seat-party r"> Republican </div>
+				<div class="seat-tenure"> Class 3 - Seat up in 2022 </div>
+			</div>
+			<div class="popup" id="nd-1-info"> 
+				<div class="seat-name"> North Dakota </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Kevin Cramer </div>
+				<div class="seat-party r"> Republican </div>
+				<div class="seat-tenure"> Class 1 - Seat up in 2024 </div>
+			</div>
+			<div class="popup" id="nd-3-info"> 
+				<div class="seat-name"> North Dakota </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> John Hoeven </div>
+				<div class="seat-party r"> Republican </div>
+				<div class="seat-tenure"> Class 3 - Seat up in 2022 </div>
+			</div>
+			<div class="popup" id="oh-1-info">
+				<div class="seat-name"> Ohio </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Sherrod Brown </div>
+				<div class="seat-party d"> Democrat </div>
+				<div class="seat-tenure"> Class 1 - Seat up in 2024 </div>
+			</div>
+			<div class="popup" id="oh-3-info">
+				<div class="seat-name"> Ohio </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Rob Portman </div>
+				<div class="seat-party r"> Republican </div>
+				<div class="seat-tenure"> Class 3 - Seat up in 2022 </div>
+			</div>
+			<div class="popup" id="ok-2-info">
+				<div class="seat-name"> Oklahoma </div>
+				<div class="seat-rating sfr"> Republican Hold </div>
+				<div class="seat-holder"> Jim Inhofe </div>
+				<div class="seat-party r"> Republican </div>
+				<div class="seat-tenure"> Class 2 - Seat up in 2020 </div>
+			</div>
+			<div class="popup" id="ok-3-info">
+				<div class="seat-name"> Oklahoma </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> James Lankford </div>
+				<div class="seat-party r"> Republican </div>
+				<div class="seat-tenure"> Class 3 - Seat up in 2022 </div>
+			</div>
+			<div class="popup" id="or-2-info">
+				<div class="seat-name"> Oregon </div>
+				<div class="seat-rating sfd"> Democratic Hold </div>
+				<div class="seat-holder"> Jeff Merkley </div>
+				<div class="seat-party d"> Democrat </div>
+				<div class="seat-tenure"> Class 2 - Seat up in 2020 </div>
+			</div>
+			<div class="popup" id="or-3-info">
+				<div class="seat-name"> Oregon </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Ron Wyden </div>
+				<div class="seat-party d"> Democrat </div>
+				<div class="seat-tenure"> Class 3 - Seat up in 2022 </div>
+			</div>
+			<div class="popup" id="pa-1-info">
+				<div class="seat-name"> Pennsylvania </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Bob Casey Jr. </div>
+				<div class="seat-party d"> Democrat </div>
+				<div class="seat-tenure"> Class 1 - Seat up in 2024 </div>
+			</div>
+			<div class="popup" id="pa-3-info">
+				<div class="seat-name"> Pennsylvania </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Pat Toomey </div>
+				<div class="seat-party r"> Republican </div>
+				<div class="seat-tenure"> Class 3 - Seat up in 2022 </div>
+			</div>
+			<div class="popup" id="ri-1-info">
+				<div class="seat-name"> Rhode Island </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Sheldon Whitehouse </div>
+				<div class="seat-party d"> Democrat </div>
+				<div class="seat-tenure"> Class 1 - Seat up in 2024 </div>
+			</div>
+			<div class="popup" id="ri-2-info">
+				<div class="seat-name"> Rhode Island </div>
+				<div class="seat-rating sfd"> Democratic Hold </div>
+				<div class="seat-holder"> Jack Reed </div>
+				<div class="seat-party d"> Democrat </div>
+				<div class="seat-tenure"> Class 2 - Seat up in 2020 </div>
+			</div>
+			<div class="popup" id="sc-2-info">
+				<div class="seat-name"> South Carolina </div>
+				<div class="seat-rating sfr"> Republican Hold </div>
+				<div class="seat-holder"> Lindsey Graham </div>
+				<div class="seat-party r"> Republican </div>
+				<div class="seat-tenure"> Class 2 - Seat up in 2020 </div>
+			</div>
+			<div class="popup" id="sc-3-info">
+				<div class="seat-name"> South Carolina </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Tim Scott </div>
+				<div class="seat-party r"> Republican </div>
+				<div class="seat-tenure"> Class 3 - Seat up in 2022 </div>
+			</div>
+			<div class="popup" id="sd-2-info">
+				<div class="seat-name"> South Dakota </div>
+				<div class="seat-rating sfr"> Republican Hold </div>
+				<div class="seat-holder"> Mike Rounds </div>
+				<div class="seat-party r"> Republican </div>
+				<div class="seat-tenure"> Class 2 - Seat up in 2020 </div>
+			</div>
+			<div class="popup" id="sd-3-info">
+				<div class="seat-name"> South Dakota </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> John Thune </div>
+				<div class="seat-party r"> Republican </div>
+				<div class="seat-tenure"> Class 3 - Seat up in 2022 </div>
+			</div>
+			<div class="popup" id="tn-1-info">
+				<div class="seat-name"> Tennessee </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Marsha Blackburn </div>
+				<div class="seat-party r"> Republican </div>
+				<div class="seat-tenure"> Class 1 - Seat up in 2024 </div>
+			</div>
+			<div class="popup" id="tn-2-info">
+				<div class="seat-name"> Tennessee </div>
+				<div class="seat-rating sfr"> Republican Hold </div>
+				<div class="seat-holder"> Bill Hagerty </div>
+				<div class="seat-party r"> Republican </div>
+				<div class="seat-tenure"> Class 2 - Seat up in 2020 </div>
+			</div>
+			<div class="popup" id="tx-1-info">
+				<div class="seat-name"> Texas </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Ted Cruz </div>
+				<div class="seat-party r"> Republican </div>
+				<div class="seat-tenure"> Class 1 - Seat up in 2024 </div>
+			</div>
+			<div class="popup" id="tx-2-info">
+				<div class="seat-name"> Texas </div>
+				<div class="seat-rating sfr"> Republican Hold </div>
+				<div class="seat-holder"> John Cornyn </div>
+				<div class="seat-party r"> Republican </div>
+				<div class="seat-tenure"> Class 2 - Seat up in 2020 </div>
+			</div>
+			<div class="popup" id="ut-1-info">
+				<div class="seat-name"> Utah </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Mitt Romney </div>
+				<div class="seat-party r"> Republican </div>
+				<div class="seat-tenure"> Class 1 - Seat up in 2024 </div>
+			</div>
+			<div class="popup" id="ut-3-info">
+				<div class="seat-name"> Utah </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Mike Lee </div>
+				<div class="seat-party r"> Republican </div>
+				<div class="seat-tenure"> Class 3 - Seat up in 2022 </div>
+			</div>
+			<div class="popup" id="vt-1-info">
+				<div class="seat-name"> Vermont </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Bernie Sanders </div>
+				<div class="seat-party i"> Independent (D) </div>
+				<div class="seat-tenure"> Class 1 - Seat up in 2024 </div>
+			</div>
+			<div class="popup" id="vt-3-info">
+				<div class="seat-name"> Vermont </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Patrick Leahy </div>
+				<div class="seat-party d"> Democrat </div>
+				<div class="seat-tenure"> Class 3 - Seat up in 2022 </div>
+			</div>
+			<div class="popup" id="va-1-info">
+				<div class="seat-name"> Virginia </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Tim Kaine </div>
+				<div class="seat-party d"> Democrat </div>
+				<div class="seat-tenure"> Class 1 - Seat up in 2024 </div>
+			</div>
+			<div class="popup" id="va-2-info">
+				<div class="seat-name"> Virginia </div>
+				<div class="seat-rating sfd"> Democratic Hold </div>
+				<div class="seat-holder"> Mark Warner </div>
+				<div class="seat-party d"> Democrat </div>
+				<div class="seat-tenure"> Class 2 - Seat up in 2020 </div>
+			</div>
+			<div class="popup" id="wa-1-info">
+				<div class="seat-name"> Washington </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Maria Cantwell </div>
+				<div class="seat-party d"> Democrat </div>
+				<div class="seat-tenure"> Class 1 - Seat up in 2024 </div>
+			</div>
+			<div class="popup" id="wa-3-info">
+				<div class="seat-name"> Washington </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Patty Murray </div>
+				<div class="seat-party d"> Democrat </div>
+				<div class="seat-tenure"> Class 3 - Seat up in 2022 </div>
+			</div>
+			<div class="popup" id="wv-1-info">
+				<div class="seat-name"> West Virginia </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Joe Manchin </div>
+				<div class="seat-party d"> Democrat </div>
+				<div class="seat-tenure"> Class 1 - Seat up in 2024 </div>
+			</div>
+			<div class="popup" id="wv-2-info">
+				<div class="seat-name"> West Virginia </div>
+				<div class="seat-rating sfr"> Republican Hold </div>
+				<div class="seat-holder"> Shelley Moore Capito </div>
+				<div class="seat-party r"> Republican </div>
+				<div class="seat-tenure"> Class 2 - Seat up in 2020 </div>
+			</div>
+			<div class="popup" id="wi-1-info">
+				<div class="seat-name"> Wisconsin </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Tammy Baldwin </div>
+				<div class="seat-party d"> Democrat </div>
+				<div class="seat-tenure"> Class 1 - Seat up in 2024 </div>
+			</div>
+			<div class="popup" id="wi-3-info">
+				<div class="seat-name"> Wisconsin </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> Ron Johnson </div>
+				<div class="seat-party r"> Republican </div>
+				<div class="seat-tenure"> Class 3 - Seat up in 2022 </div>
+			</div>
+			<div class="popup" id="wy-1-info">
+				<div class="seat-name"> Wyoming </div>
+				<div class="seat-rating"> No election in 2020 </div>
+				<div class="seat-holder"> John Barrasso </div>
+				<div class="seat-party r"> Republican </div>
+				<div class="seat-tenure"> Class 1 - Seat up in 2024 </div>
+			</div>
+			<div class="popup" id="wy-2-info">
+				<div class="seat-name"> Wyoming </div>
+				<div class="seat-rating sfr"> Republican Hold </div>
+				<div class="seat-holder"> Cynthia Lummis </div>
+				<div class="seat-party r"> Republican </div>
+				<div class="seat-tenure"> Class 2 - Seat up in 2020 </div>
+			</div>
+		</div>
+	</div>
+</body>

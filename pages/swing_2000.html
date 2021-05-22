@@ -1,0 +1,180 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="assets/styles/trends/trends.css">
+	<link rel="stylesheet" type="text/css" href="assets/styles/trends/trends_swing_2000.css">
+  	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  	<!--<script src="assets/js/senate.js"></script>-->
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</html>
+<body>
+	<div id="topbar">
+		<div id="topbar_title">
+			Political - U.S. Trends
+		</div>
+		<div id="nav">
+			<a class="nav_button" id="political_button" href="politicalhome.html"> BACK </a>
+			<a class="nav_button" id="ec_button" href="electoralcollege.html"> President </a>
+			<a class="nav_button" id="house_button" href="ustrends.html"> Trends </a>
+			<a class="nav_button" id="senate_button" href="ussenate.html"> Senate </a>
+		</div>
+	</div>
+	<div id="content">
+		<div class="map-container">
+			<div class="map-infobox">
+				<div class="swing-buttons">
+		        	<div class="heading"> SWING from Previous Election: </div>
+		        	<div class="button-flex">
+		        		<a class="info_button" id="swing-72" href="ustrends_swing_1972.html"> 1972 </a>
+		        		<a class="info_button" id="swing-76" href="ustrends_swing_1976.html"> 1976 </a>
+		          		<a class="info_button" id="swing-80" href="ustrends_swing_1980.html"> 1980 </a>
+		        		<a class="info_button" id="swing-84" href="ustrends_swing_1984.html"> 1984 </a>
+		        		<a class="info_button" id="swing-88" href="ustrends_swing_1988.html"> 1988 </a>
+		        		<a class="info_button" id="swing-92" href="ustrends_swing_1992.html"> 1992 </a>
+		        		<a class="info_button" id="swing-96" href="ustrends_swing_1996.html"> 1996 </a>
+		        		<a class="info_button" id="swing-00" href="ustrends_swing_2000.html"> 2000 </a>
+		        		<a class="info_button" id="swing-04" href="ustrends_swing_2004.html"> 2004 </a>
+		        		<a class="info_button" id="swing-08" href="ustrends_swing_2008.html"> 2008 </a>
+		        		<a class="info_button" id="swing-12" href="ustrends_swing_2012.html"> 2012 </a>
+		        		<a class="info_button" id="swing-16" href="ustrends_swing_2016.html"> 2016 </a>
+		        	</div>
+		      	</div>
+		      	<div class="rank-buttons">
+		      		<div class="heading"> States' Party RANK: </div>
+		      		<div class="button-flex">
+		      			<a class="info_button" id="rank-72" href="ustrends_rank_1972.html"> 1972 </a>
+		        		<a class="info_button" id="rank-76" href="ustrends_rank_1976.html"> 1976 </a>
+		          		<a class="info_button" id="rank-80" href="ustrends_rank_1980.html"> 1980 </a>
+		        		<a class="info_button" id="rank-84" href="ustrends_rank_1984.html"> 1984 </a>
+		        		<a class="info_button" id="rank-88" href="ustrends_rank_1988.html"> 1988 </a>
+		        		<a class="info_button" id="rank-92" href="ustrends_rank_1992.html"> 1992 </a>
+		        		<a class="info_button" id="rank-96" href="ustrends_rank_1996.html"> 1996 </a>
+		        		<a class="info_button" id="rank-00" href="ustrends_rank_2000.html"> 2000 </a>
+		        		<a class="info_button" id="rank-04" href="ustrends_rank_2004.html"> 2004 </a>
+		        		<a class="info_button" id="rank-08" href="ustrends_rank_2008.html"> 2008 </a>
+		        		<a class="info_button" id="rank-12" href="ustrends_rank_2012.html"> 2012 </a>
+		        		<a class="info_button" id="rank-16" href="ustrends_rank_2016.html"> 2016 </a>
+		        	</div>
+		      	</div>
+			</div>
+			<div class="meter-labels">
+		    	<h6> </h6>
+		    	<h6 id="safe-d-label"> >15% + D  </h6>
+		    	<h6 id="likely-d-label"> 10-15% + D </h6>
+		    	<h6 id="lean-d-label"> 5-10% + D </h6>
+		    	<h6 id="barely-d-label"> 0-5% + D </h6>
+		    	<h6 id="barely-r-label"> 0-5% + R </h6>
+		    	<h6 id="lean-r-label"> 5-10% + R </h6>
+		    	<h6 id="likely-r-label"> 10-15% + R </h6>
+		    	<h6 id="safe-r-label"> >15% + R </h6>
+		    	<h6> </h6>
+		    </div>
+		</div>
+		<div class="map"> 
+			<div class="grid-row 1">
+				<div class="pixel state ak" onclick="openInfoBox('ak-info')"> <span class="state-label" id="ak">AK</span> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel state me" onclick="openInfoBox('me-info')"> <span class="state-label" id="me">ME</span> </div>
+			</div>
+			<div class="grid-row 3">
+				<div class="pixel"> </div>
+				<div class="pixel state wa" onclick="openInfoBox('wa-info')"> <span class="state-label" id="wa">WA</span> </div>
+				<div class="pixel state id" onclick="openInfoBox('id-info')"> <span class="state-label" id="id">ID</span> </div>
+				<div class="pixel state mt" onclick="openInfoBox('mt-info')"> <span class="state-label" id="mt">MT</span> </div>
+				<div class="pixel state nd" onclick="openInfoBox('nd-info')"> <span class="state-label" id="nd">ND</span> </div>
+				<div class="pixel state mn" onclick="openInfoBox('mn-info')"> <span class="state-label" id="mn">MN</span> </div>
+				<div class="pixel state wi" onclick="openInfoBox('wi-info')"> <span class="state-label" id="wi">WI</span> </div>
+				<div class="pixel state mi" onclick="openInfoBox('mi-info')"> <span class="state-label" id="mi">MI</span> </div>
+				<div class="pixel state pa" onclick="openInfoBox('pa-info')"> <span class="state-label" id="pa">PA</span> </div>
+				<div class="pixel state ny" onclick="openInfoBox('ny-info')"> <span class="state-label" id="ny">NY</span> </div>
+				<div class="pixel state vt" onclick="openInfoBox('vt-info')"> <span class="state-label" id="vt">VT</span> </div>
+				<div class="pixel state nh" onclick="openInfoBox('nh-info')"> <span class="state-label" id="nh">NH</span> </div>
+				<div class="pixel"> </div>
+			</div>
+			<div class="grid-row 5">
+				<div class="pixel"> </div>
+				<div class="pixel state or" onclick="openInfoBox('or-info')"> <span class="state-label" id="or">OR</span> </div>
+				<div class="pixel state nv" onclick="openInfoBox('nv-info')"> <span class="state-label" id="nv">NV</span> </div>
+				<div class="pixel state wy" onclick="openInfoBox('wy-info')"> <span class="state-label" id="wy">WY</span> </div>
+				<div class="pixel state sd" onclick="openInfoBox('sd-info')"> <span class="state-label" id="sd">SD</span> </div>
+				<div class="pixel state ia" onclick="openInfoBox('ia-info')"> <span class="state-label" id="ia">IA</span> </div>
+				<div class="pixel state il" onclick="openInfoBox('il-info')"> <span class="state-label" id="il">IL</span> </div>
+				<div class="pixel state oh" onclick="openInfoBox('oh-info')"> <span class="state-label" id="oh">OH</span> </div>
+				<div class="pixel state va" onclick="openInfoBox('va-info')"> <span class="state-label" id="va">VA</span> </div>
+				<div class="pixel state nj" onclick="openInfoBox('nj-info')"> <span class="state-label" id="nj">NJ</span> </div>
+				<div class="pixel state ma" onclick="openInfoBox('ma-info')"> <span class="state-label" id="ma">MA</span> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+			</div>
+			<div class="grid-row 7">
+				<div class="pixel"> </div>
+				<div class="pixel state ca" onclick="openInfoBox('ca-info')"> <span class="state-label" id="ca">CA</span> </div>
+				<div class="pixel state ut" onclick="openInfoBox('ut-info')"> <span class="state-label" id="ut">UT</span> </div>
+				<div class="pixel state co" onclick="openInfoBox('co-info')"> <span class="state-label" id="co">CO</span> </div>
+				<div class="pixel state ne" onclick="openInfoBox('ne-info')"> <span class="state-label" id="ne">NE</span> </div>
+				<div class="pixel state mo" onclick="openInfoBox('mo-info')"> <span class="state-label" id="mo">MO</span> </div>
+				<div class="pixel state in" onclick="openInfoBox('in-info')"> <span class="state-label" id="in">IN</span> </div>
+				<div class="pixel state wv" onclick="openInfoBox('wv-info')"> <span class="state-label" id="wv">WV</span> </div>
+				<div class="pixel state nc" onclick="openInfoBox('nc-info')"> <span class="state-label" id="nc">NC</span> </div>
+				<div class="pixel state de" onclick="openInfoBox('de-info')"> <span class="state-label" id="de">DE</span> </div>
+				<div class="pixel state ct" onclick="openInfoBox('ct-info')"> <span class="state-label" id="ct">CT</span> </div>
+				<div class="pixel state ri" onclick="openInfoBox('ri-info')"> <span class="state-label" id="ri">RI</span> </div>
+				<div class="pixel"> </div>
+			</div>
+			<div class="grid-row 9">
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel state az" onclick="openInfoBox('az-info')"> <span class="state-label" id="az">AZ</span> </div>
+				<div class="pixel state nm" onclick="openInfoBox('nm-info')"> <span class="state-label" id="nm">NM</span> </div>
+				<div class="pixel state ks" onclick="openInfoBox('ks-info')"> <span class="state-label" id="ks">KS</span> </div>
+				<div class="pixel state ar" onclick="openInfoBox('ar-info')"> <span class="state-label" id="ar">AR</span> </div>
+				<div class="pixel state ky" onclick="openInfoBox('ky-info')"> <span class="state-label" id="ky">KY</span> </div>
+				<div class="pixel state tn" onclick="openInfoBox('tn-info')"> <span class="state-label" id="tn">TN</span> </div>
+				<div class="pixel state sc" onclick="openInfoBox('sc-info')"> <span class="state-label" id="sc">SC</span> </div>
+				<div class="pixel state md" onclick="openInfoBox('md-info')"> <span class="state-label" id="md">MD</span> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+			</div>
+			<div class="grid-row 11">
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel state ok" onclick="openInfoBox('ok-info')"> <span class="state-label" id="ok">OK</span> </div>
+				<div class="pixel state la" onclick="openInfoBox('la-info')"> <span class="state-label" id="la">LA</span> </div>
+				<div class="pixel state ms" onclick="openInfoBox('ms-info')"> <span class="state-label" id="ms">MS</span> </div>
+				<div class="pixel state al" onclick="openInfoBox('al-info')"> <span class="state-label" id="al">AL</span> </div>
+				<div class="pixel state ga" onclick="openInfoBox('ga-info')"> <span class="state-label" id="ga">GA</span> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+			</div>
+			<div class="grid-row 13">
+				<div class="pixel state hi" onclick="openInfoBox('hi-info')"> <span class="state-label" id="hi">HI</span> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel state tx" onclick="openInfoBox('tx-info')"> <span class="state-label" id="tx">TX</span> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel state fl" onclick="openInfoBox('fl-info')"> <span class="state-label" id="fl">FL</span> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+				<div class="pixel"> </div>
+			</div>
+		</div>
+	</div>
+</body>
